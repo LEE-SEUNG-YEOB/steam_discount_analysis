@@ -6,7 +6,8 @@
       "Bash(jupyter nbconvert:*)",
       "Bash(python -m nbconvert --to notebook --execute --inplace notebooks/07_analysis.ipynb)",
       "Bash(python -c \"import pandas, numpy, matplotlib, scipy; print\\('ok'\\)\")",
-      "Bash(python notebooks/run_analysis_temp.py)"
+      "Bash(python notebooks/run_analysis_temp.py)",
+      "Bash(python -c \"import scipy; print\\(scipy.__version__\\)\")"
     ]
   }
 }
