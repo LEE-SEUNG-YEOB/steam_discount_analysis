@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(python -c \"import json; nb=json.load\\(open\\('c:/Users/alvin/OneDrive/바탕 화면/WorkSpace/SteamProject/steam_discount_analysis/notebooks/04_discount_history.ipynb', encoding='utf-8'\\)\\); [print\\(i, c.get\\('id','NO_ID'\\), c['source'][:60].replace\\(chr\\(10\\),' '\\)\\) for i,c in enumerate\\(nb['cells']\\)]\")",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "Bash(jupyter nbconvert:*)",
+      "Bash(python -m nbconvert --to notebook --execute --inplace notebooks/07_analysis.ipynb)",
+      "Bash(python -c \"import pandas, numpy, matplotlib, scipy; print\\('ok'\\)\")",
+      "Bash(python notebooks/run_analysis_temp.py)"
     ]
   }
 }
