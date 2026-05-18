@@ -1,0 +1,901 @@
+﻿app_id,app_name,genre,review_id,timestamp_created,voted_up,playtime_at_review_min,playtime_forever_min,language,review_length
+105600,Terraria,Action,225850046,1779118736,True,12710,12734,russian,4
+105600,Terraria,Action,225849863,1779118570,True,25453,25453,russian,59
+105600,Terraria,Action,225849573,1779118321,True,3957,3967,spanish,70
+105600,Terraria,Action,225849558,1779118307,True,21214,21214,russian,42
+105600,Terraria,Action,225849281,1779118078,True,1603,1603,russian,2
+105600,Terraria,Action,225848784,1779117609,True,43692,43692,english,957
+105600,Terraria,Action,225848445,1779117306,True,955,955,russian,12
+105600,Terraria,Action,225847958,1779116893,True,805,805,turkish,19
+105600,Terraria,Action,225847824,1779116766,True,554,554,english,4
+105600,Terraria,Action,225847616,1779116563,True,423,453,russian,817
+105600,Terraria,Action,225846964,1779115965,True,9308,9314,english,19
+105600,Terraria,Action,225846949,1779115948,True,12353,12394,ukrainian,148
+105600,Terraria,Action,225846898,1779115895,True,13637,13637,russian,4
+105600,Terraria,Action,225846324,1779115398,True,1842,1842,english,16
+105600,Terraria,Action,225845778,1779114914,True,2582,2642,english,38
+105600,Terraria,Action,225845768,1779114906,True,283,343,english,6
+105600,Terraria,Action,225845702,1779114856,True,577,620,polish,7
+105600,Terraria,Action,225845063,1779114277,True,11224,11284,schinese,18
+105600,Terraria,Action,225844635,1779113875,True,6346,6380,schinese,2
+105600,Terraria,Action,225844391,1779113648,True,18048,18138,english,5
+105600,Terraria,Action,225844003,1779113244,True,27916,28006,german,47
+105600,Terraria,Action,225843700,1779112950,True,9836,9836,schinese,1
+105600,Terraria,Action,225843593,1779112842,True,3188,3188,russian,43
+105600,Terraria,Action,225843353,1779112592,True,1005,1005,turkish,3
+105600,Terraria,Action,225843345,1779112581,True,39125,39125,ukrainian,12
+105600,Terraria,Action,225842719,1779111921,True,24199,24205,spanish,50
+105600,Terraria,Action,225842536,1779111738,False,6080,6080,english,753
+105600,Terraria,Action,225842502,1779111694,True,15493,15493,russian,1104
+105600,Terraria,Action,225842454,1779111646,True,7241,7248,vietnamese,8
+105600,Terraria,Action,225841586,1779110780,True,12785,12785,russian,12
+105600,Terraria,Action,225841005,1779110170,True,3844,3844,english,18
+105600,Terraria,Action,225840432,1779109587,True,2618,2618,ukrainian,5
+105600,Terraria,Action,225840330,1779109487,True,466,466,english,44
+105600,Terraria,Action,225840176,1779109310,True,18954,18954,english,45
+105600,Terraria,Action,225840171,1779109306,True,2101,2132,spanish,27
+105600,Terraria,Action,225840123,1779109253,False,1520,1520,english,9
+105600,Terraria,Action,225840109,1779109238,True,8016,8160,schinese,2
+105600,Terraria,Action,225839976,1779109086,True,13661,13661,russian,26
+105600,Terraria,Action,225839734,1779108836,True,446,457,thai,34
+105600,Terraria,Action,225839705,1779108801,False,40,40,brazilian,63
+105600,Terraria,Action,225839590,1779108670,True,6593,6722,english,22
+105600,Terraria,Action,225839514,1779108600,True,3825,3850,english,18
+105600,Terraria,Action,225839421,1779108489,True,1395,1480,schinese,4
+105600,Terraria,Action,225839419,1779108488,True,7859,8009,schinese,4
+105600,Terraria,Action,225839091,1779108109,True,393,420,english,65
+105600,Terraria,Action,225839021,1779108044,True,26683,26683,tchinese,2
+105600,Terraria,Action,225838910,1779107915,False,266,266,english,15
+105600,Terraria,Action,225838893,1779107892,True,214,298,russian,25
+105600,Terraria,Action,225838093,1779106924,True,7079,7128,russian,39
+105600,Terraria,Action,225838075,1779106900,True,198,198,english,43
+105600,Terraria,Action,225838013,1779106832,True,630,692,russian,15
+105600,Terraria,Action,225837745,1779106494,True,11819,12029,tchinese,9
+105600,Terraria,Action,225837296,1779105988,True,995,995,russian,187
+105600,Terraria,Action,225837224,1779105889,True,15408,15509,schinese,12
+105600,Terraria,Action,225837212,1779105879,True,19345,19511,english,74
+105600,Terraria,Action,225837090,1779105737,True,3231,3231,russian,3
+105600,Terraria,Action,225836915,1779105522,True,1274,1318,koreana,2
+105600,Terraria,Action,225836657,1779105185,True,3293,3293,english,111
+105600,Terraria,Action,225836618,1779105135,True,1280,1280,polish,2
+105600,Terraria,Action,225836592,1779105111,True,25,25,english,14
+105600,Terraria,Action,225836239,1779104689,True,383,447,english,11
+105600,Terraria,Action,225836067,1779104452,True,5053,5140,russian,61
+105600,Terraria,Action,225836014,1779104391,True,283,310,english,116
+105600,Terraria,Action,225835575,1779103870,True,3062,3065,polish,52
+105600,Terraria,Action,225835508,1779103801,True,6205,6205,english,10
+105600,Terraria,Action,225834493,1779102465,True,2794,2794,english,95
+105600,Terraria,Action,225834116,1779101978,True,622,885,russian,6
+105600,Terraria,Action,225834028,1779101858,True,3105,3234,english,68
+105600,Terraria,Action,225834014,1779101836,True,975,980,russian,4
+105600,Terraria,Action,225833250,1779100717,True,22072,22072,russian,39
+105600,Terraria,Action,225833179,1779100634,True,1479,1489,russian,4
+105600,Terraria,Action,225833176,1779100633,True,4320,4383,english,14
+105600,Terraria,Action,225833090,1779100523,True,6724,7034,schinese,4
+105600,Terraria,Action,225832993,1779100378,True,3144,3444,ukrainian,4
+105600,Terraria,Action,225832922,1779100269,True,8544,8544,schinese,8
+105600,Terraria,Action,225832693,1779099866,True,13538,13538,english,36
+105600,Terraria,Action,225832595,1779099739,True,22141,22141,russian,4
+105600,Terraria,Action,225832355,1779099366,True,7050,7050,schinese,2
+105600,Terraria,Action,225831594,1779098184,True,1274,1351,schinese,2
+105600,Terraria,Action,225831023,1779097388,True,1818,1818,russian,18
+105600,Terraria,Action,225830790,1779097050,True,12597,12600,english,31
+105600,Terraria,Action,225830778,1779097038,True,93168,93168,english,235
+105600,Terraria,Action,225830704,1779096915,True,21480,21480,russian,40
+105600,Terraria,Action,225830470,1779096577,True,692,1052,spanish,198
+105600,Terraria,Action,225830416,1779096486,True,178,178,russian,24
+105600,Terraria,Action,225829610,1779095168,True,1631,1631,brazilian,17
+105600,Terraria,Action,225829375,1779094798,True,353,477,english,9
+105600,Terraria,Action,225829281,1779094653,True,3021,3021,russian,26
+105600,Terraria,Action,225828901,1779093968,True,2812,2812,english,8
+105600,Terraria,Action,225828875,1779093919,True,14003,14129,english,7
+105600,Terraria,Action,225828054,1779092571,True,1151,1222,spanish,19
+105600,Terraria,Action,225827759,1779092039,True,9225,9225,english,336
+105600,Terraria,Action,225826216,1779089493,True,545,554,dutch,23
+105600,Terraria,Action,225825876,1779088964,True,1856,2124,schinese,1
+105600,Terraria,Action,225825420,1779088213,True,23629,23674,schinese,4
+105600,Terraria,Action,225825116,1779087711,True,1697,1952,schinese,51
+105600,Terraria,Action,225824965,1779087465,True,12818,12818,spanish,176
+105600,Terraria,Action,225824903,1779087369,True,941,941,russian,19
+105600,Terraria,Action,225824816,1779087216,True,54822,54822,english,93
+105600,Terraria,Action,225823909,1779085713,True,14690,14747,english,195
+105600,Terraria,Action,225823568,1779085116,True,14023,14118,schinese,1
+105600,Terraria,Action,225823506,1779085032,True,18085,18122,russian,1
+105600,Terraria,Action,225823477,1779084983,True,29316,29608,english,5
+105600,Terraria,Action,225823418,1779084876,False,6477,6564,english,192
+105600,Terraria,Action,225822963,1779084087,True,616,616,english,9
+105600,Terraria,Action,225822391,1779083095,True,2041,2149,english,162
+105600,Terraria,Action,225822247,1779082863,True,228,398,schinese,2
+105600,Terraria,Action,225821597,1779081785,True,4596,4596,schinese,8
+105600,Terraria,Action,225821446,1779081517,True,909,909,spanish,37
+105600,Terraria,Action,225821430,1779081489,True,26717,26717,english,3
+105600,Terraria,Action,225820498,1779080020,True,7446,7446,english,93
+105600,Terraria,Action,225820286,1779079660,True,28879,28879,latam,568
+105600,Terraria,Action,225820234,1779079582,True,22852,22871,english,12
+105600,Terraria,Action,225820037,1779079299,True,6820,6981,english,20
+105600,Terraria,Action,225819864,1779079064,True,1134,1576,schinese,1
+105600,Terraria,Action,225819857,1779079051,True,689,689,english,45
+105600,Terraria,Action,225819586,1779078636,True,17065,17065,latam,138
+105600,Terraria,Action,225819519,1779078536,True,17728,17755,english,4
+105600,Terraria,Action,225819409,1779078400,True,2195,2328,spanish,13
+105600,Terraria,Action,225819202,1779078117,True,9477,9477,polish,5
+105600,Terraria,Action,225818829,1779077546,True,643,670,english,55
+105600,Terraria,Action,225818636,1779077290,True,9837,9955,english,4
+105600,Terraria,Action,225818596,1779077236,True,25259,25259,english,18
+105600,Terraria,Action,225818260,1779076724,True,39623,39623,english,5
+105600,Terraria,Action,225817262,1779075334,True,6198,6216,english,9
+105600,Terraria,Action,225816743,1779074627,True,3499,3674,english,71
+105600,Terraria,Action,225816689,1779074566,True,13793,13793,english,22
+105600,Terraria,Action,225816482,1779074266,True,7244,7616,schinese,2
+105600,Terraria,Action,225815774,1779073304,True,256,256,english,56
+105600,Terraria,Action,225815452,1779072901,True,1691,1788,english,16
+105600,Terraria,Action,225815304,1779072699,True,1310,1429,spanish,32
+105600,Terraria,Action,225815154,1779072499,True,5188,5680,schinese,4
+105600,Terraria,Action,225815153,1779072498,True,21576,21615,english,7
+105600,Terraria,Action,225815032,1779072315,True,21058,21058,koreana,51
+105600,Terraria,Action,225814758,1779071944,True,3292,3912,schinese,74
+105600,Terraria,Action,225814733,1779071909,True,1870,1870,spanish,5
+105600,Terraria,Action,225814703,1779071867,True,807,807,english,247
+105600,Terraria,Action,225814028,1779070966,True,278,679,english,5
+105600,Terraria,Action,225813924,1779070834,True,3032,3043,english,86
+105600,Terraria,Action,225813661,1779070479,True,14629,14629,brazilian,15
+105600,Terraria,Action,225813269,1779069950,True,11106,11164,english,30
+105600,Terraria,Action,225813005,1779069596,True,1928,1928,schinese,8
+105600,Terraria,Action,225812566,1779069063,True,46,46,english,9
+105600,Terraria,Action,225811887,1779068202,True,67875,67875,brazilian,4
+105600,Terraria,Action,225811785,1779068070,False,6534,6622,english,113
+105600,Terraria,Action,225811503,1779067695,True,3228,3282,english,9
+105600,Terraria,Action,225811359,1779067514,True,7270,7270,brazilian,73
+105600,Terraria,Action,225811078,1779067194,True,1092,1183,english,10
+105600,Terraria,Action,225810869,1779066929,True,3595,3595,russian,15
+105600,Terraria,Action,225810207,1779066083,True,10447,10447,english,300
+105600,Terraria,Action,225809962,1779065770,True,324,397,english,19
+105600,Terraria,Action,225809844,1779065633,True,11334,11334,brazilian,45
+105600,Terraria,Action,225809492,1779065251,True,8373,8373,english,398
+105600,Terraria,Action,225809251,1779064961,True,2930,3087,spanish,15
+105600,Terraria,Action,225808885,1779064473,True,14042,14042,english,3
+105600,Terraria,Action,225808756,1779064315,True,9405,9410,english,9
+105600,Terraria,Action,225808525,1779064029,True,1224,1340,english,189
+105600,Terraria,Action,225808207,1779063648,True,603,611,english,10
+105600,Terraria,Action,225808081,1779063505,True,10973,10973,latam,173
+105600,Terraria,Action,225807917,1779063313,True,942,945,spanish,391
+105600,Terraria,Action,225807657,1779063033,True,1358,1411,english,20
+105600,Terraria,Action,225807195,1779062520,True,3719,3719,english,12
+105600,Terraria,Action,225806046,1779061182,True,6810,6810,english,322
+105600,Terraria,Action,225805891,1779060952,True,2048,2087,spanish,4
+105600,Terraria,Action,225805002,1779059967,True,17781,18742,english,53
+105600,Terraria,Action,225804226,1779059081,True,32257,32529,english,7
+105600,Terraria,Action,225803967,1779058792,True,7543,7543,russian,42
+105600,Terraria,Action,225803778,1779058599,True,17469,17469,russian,32
+105600,Terraria,Action,225803625,1779058434,True,22681,22681,russian,28
+105600,Terraria,Action,225803504,1779058315,True,29,29,spanish,8
+105600,Terraria,Action,225803436,1779058237,True,6245,6245,english,12
+105600,Terraria,Action,225803393,1779058177,True,51832,51832,spanish,162
+105600,Terraria,Action,225803276,1779058040,True,9477,9477,english,61
+105600,Terraria,Action,225802719,1779057457,True,2172,2690,spanish,12
+105600,Terraria,Action,225802203,1779056934,True,1652,1753,spanish,16
+105600,Terraria,Action,225801921,1779056630,True,5985,6160,english,60
+105600,Terraria,Action,225801691,1779056415,True,2282,2466,spanish,82
+105600,Terraria,Action,225799860,1779054566,True,207,207,brazilian,93
+105600,Terraria,Action,225799717,1779054435,True,4182,4182,brazilian,232
+105600,Terraria,Action,225799581,1779054290,True,402,402,russian,10
+105600,Terraria,Action,225799157,1779053880,True,10862,10956,english,7
+105600,Terraria,Action,225798928,1779053647,True,178,178,brazilian,8
+105600,Terraria,Action,225798622,1779053381,True,15974,15974,russian,359
+105600,Terraria,Action,225798524,1779053300,True,708,771,english,4
+105600,Terraria,Action,225798076,1779052911,True,21192,21192,russian,0
+105600,Terraria,Action,225798072,1779052905,True,987,987,latam,38
+105600,Terraria,Action,225797147,1779052109,True,2472,2556,brazilian,4
+105600,Terraria,Action,225797104,1779052068,True,4462,4462,latam,103
+105600,Terraria,Action,225796878,1779051884,False,1586,1586,english,358
+105600,Terraria,Action,225796855,1779051866,True,316,316,english,22
+105600,Terraria,Action,225796489,1779051544,True,2102,2102,brazilian,303
+105600,Terraria,Action,225796353,1779051427,True,11980,12008,english,43
+105600,Terraria,Action,225796145,1779051257,True,12003,12003,russian,125
+105600,Terraria,Action,225794859,1779050204,True,2638,2946,english,49
+105600,Terraria,Action,225794798,1779050158,True,25115,25115,russian,43
+105600,Terraria,Action,225794776,1779050142,True,517,517,english,62
+105600,Terraria,Action,225794711,1779050097,False,35234,35537,english,8
+105600,Terraria,Action,225794469,1779049918,True,19587,19591,english,15
+105600,Terraria,Action,225794030,1779049573,True,1738,1940,english,16
+105600,Terraria,Action,225793828,1779049418,True,661,678,english,3
+105600,Terraria,Action,225793636,1779049267,True,8998,8998,brazilian,3
+105600,Terraria,Action,225793623,1779049261,True,12286,12411,english,47
+105600,Terraria,Action,225793490,1779049148,True,2464,2473,french,78
+105600,Terraria,Action,225793442,1779049115,True,199,572,spanish,12
+105600,Terraria,Action,225793054,1779048802,True,3957,4434,english,3
+105600,Terraria,Action,225792839,1779048640,True,15085,15085,english,579
+105600,Terraria,Action,225792549,1779048430,True,2041,2140,russian,137
+105600,Terraria,Action,225791647,1779047729,True,13375,13375,english,20
+105600,Terraria,Action,225791449,1779047574,True,16834,16834,russian,50
+105600,Terraria,Action,225791286,1779047442,True,1716,2050,english,8
+105600,Terraria,Action,225791135,1779047337,True,9116,9240,spanish,57
+105600,Terraria,Action,225791130,1779047332,True,2250,2278,ukrainian,6
+105600,Terraria,Action,225790950,1779047175,True,5086,5086,english,33
+105600,Terraria,Action,225790883,1779047125,True,1167,1167,brazilian,18
+105600,Terraria,Action,225790739,1779047035,True,2392,2704,english,1
+105600,Terraria,Action,225790618,1779046940,True,7135,7135,russian,18
+105600,Terraria,Action,225790150,1779046593,True,8007,8167,russian,1
+105600,Terraria,Action,225789942,1779046448,True,2653,2653,russian,58
+105600,Terraria,Action,225789487,1779046112,True,2211,2454,russian,35
+105600,Terraria,Action,225789481,1779046108,True,2422,2422,english,55
+105600,Terraria,Action,225789349,1779046004,True,3660,3732,russian,6
+105600,Terraria,Action,225789223,1779045922,True,3511,3586,english,13
+105600,Terraria,Action,225789125,1779045859,True,1933,1936,spanish,20
+105600,Terraria,Action,225789008,1779045765,True,214,260,dutch,27
+105600,Terraria,Action,225788955,1779045731,True,22475,22475,english,147
+105600,Terraria,Action,225788697,1779045535,True,4436,4436,koreana,128
+105600,Terraria,Action,225788383,1779045292,True,5286,5398,english,7
+105600,Terraria,Action,225788304,1779045221,True,10557,10894,spanish,15
+105600,Terraria,Action,225788018,1779044999,True,8506,8506,spanish,7
+105600,Terraria,Action,225788012,1779044994,True,3913,4318,brazilian,24
+105600,Terraria,Action,225788002,1779044991,True,9167,9167,english,63
+105600,Terraria,Action,225787326,1779044490,True,26160,26215,brazilian,32
+105600,Terraria,Action,225787316,1779044479,True,920,920,english,87
+105600,Terraria,Action,225786884,1779044147,True,95998,95998,russian,14
+105600,Terraria,Action,225786811,1779044090,True,370,370,turkish,27
+105600,Terraria,Action,225786784,1779044068,True,547,547,russian,70
+105600,Terraria,Action,225786607,1779043954,True,3683,3780,brazilian,152
+105600,Terraria,Action,225786500,1779043871,True,6592,6634,spanish,72
+105600,Terraria,Action,225786238,1779043689,True,4066,4066,russian,2
+105600,Terraria,Action,225786235,1779043687,True,2446,2446,russian,33
+105600,Terraria,Action,225786060,1779043576,True,1921,2440,russian,29
+105600,Terraria,Action,225785739,1779043340,True,4225,4414,german,55
+105600,Terraria,Action,225785066,1779042851,True,20415,20415,russian,25
+105600,Terraria,Action,225784911,1779042751,True,398,398,english,15
+105600,Terraria,Action,225784865,1779042706,True,51545,51545,polish,86
+105600,Terraria,Action,225784488,1779042442,True,69214,69671,english,199
+105600,Terraria,Action,225784317,1779042319,True,11561,11923,russian,112
+105600,Terraria,Action,225783557,1779041702,True,4605,4856,spanish,32
+105600,Terraria,Action,225783517,1779041672,True,4431,4431,russian,181
+105600,Terraria,Action,225783503,1779041660,True,9481,9586,russian,13
+105600,Terraria,Action,225783278,1779041484,True,50689,50689,english,1628
+105600,Terraria,Action,225783258,1779041465,True,4446,4472,russian,36
+105600,Terraria,Action,225783243,1779041455,True,32870,32870,russian,54
+105600,Terraria,Action,225782738,1779041089,True,12837,12838,english,9
+105600,Terraria,Action,225782662,1779041037,True,1951,1982,russian,34
+105600,Terraria,Action,225782557,1779040942,True,2443,2610,english,3
+105600,Terraria,Action,225782547,1779040936,True,613,613,latam,38
+105600,Terraria,Action,225782483,1779040888,True,259,319,brazilian,15
+105600,Terraria,Action,225781957,1779040528,True,6183,6457,english,22
+105600,Terraria,Action,225781597,1779040255,True,23056,23056,french,795
+105600,Terraria,Action,225781360,1779040096,True,4303,4503,brazilian,184
+105600,Terraria,Action,225781087,1779039898,True,214,256,latam,27
+105600,Terraria,Action,225781048,1779039865,True,23102,23394,english,7
+105600,Terraria,Action,225780848,1779039716,True,456,600,hungarian,13
+105600,Terraria,Action,225780517,1779039469,True,50857,51158,russian,24
+105600,Terraria,Action,225780336,1779039356,True,2001,2001,turkish,5
+105600,Terraria,Action,225780286,1779039326,True,15801,15801,spanish,4
+105600,Terraria,Action,225779681,1779038910,True,442,535,english,98
+105600,Terraria,Action,225779098,1779038490,True,1753,1992,english,42
+105600,Terraria,Action,225778927,1779038371,True,19545,19545,russian,83
+105600,Terraria,Action,225778916,1779038359,True,2765,3241,spanish,1
+105600,Terraria,Action,225778854,1779038320,True,4730,4730,english,8
+105600,Terraria,Action,225778303,1779037928,False,597,996,english,78
+105600,Terraria,Action,225778302,1779037927,True,317,513,english,18
+105600,Terraria,Action,225778286,1779037918,True,10928,10928,english,29
+105600,Terraria,Action,225777967,1779037691,True,4334,4538,turkish,20
+105600,Terraria,Action,225777784,1779037548,True,333,348,english,8
+105600,Terraria,Action,225777682,1779037471,True,20734,20734,brazilian,13
+105600,Terraria,Action,225777563,1779037395,True,2159,2281,russian,24
+105600,Terraria,Action,225777058,1779037010,True,1113,1137,english,72
+105600,Terraria,Action,225776488,1779036612,True,32289,32343,english,12
+105600,Terraria,Action,225776361,1779036504,True,1457,1708,spanish,7
+105600,Terraria,Action,225776326,1779036479,True,1442,1442,schinese,30
+105600,Terraria,Action,225776090,1779036306,True,10650,10733,english,72
+105600,Terraria,Action,225776001,1779036249,True,825,887,english,82
+105600,Terraria,Action,225775779,1779036080,True,13793,13820,schinese,2
+105600,Terraria,Action,225775547,1779035928,True,15073,15073,english,36
+105600,Terraria,Action,225775503,1779035906,True,25236,25382,brazilian,147
+105600,Terraria,Action,225775485,1779035897,True,11308,11308,russian,595
+105600,Terraria,Action,225775413,1779035853,True,622,646,russian,9
+105600,Terraria,Action,225775345,1779035803,True,14970,15670,english,113
+105600,Terraria,Action,225774672,1779035342,True,5940,6262,russian,3
+105600,Terraria,Action,225774441,1779035167,True,9020,9070,english,10
+105600,Terraria,Action,225773900,1779034779,True,371,371,ukrainian,85
+105600,Terraria,Action,225773339,1779034422,True,9023,9023,english,9
+105600,Terraria,Action,225773204,1779034328,True,1261,1500,english,255
+105600,Terraria,Action,225773019,1779034213,True,3040,3045,spanish,31
+105600,Terraria,Action,225772655,1779033973,True,1164,1164,russian,110
+105600,Terraria,Action,225772264,1779033694,True,1963,2030,english,77
+105600,Terraria,Action,225772254,1779033691,True,23282,23400,english,4
+413150,Stardew Valley,Casual/Lightweight,225840728,1779109885,True,593,593,english,351
+413150,Stardew Valley,Casual/Lightweight,225840376,1779109530,True,472,472,schinese,41
+413150,Stardew Valley,Casual/Lightweight,225840367,1779109519,True,1299,1299,english,18
+413150,Stardew Valley,Casual/Lightweight,225840150,1779109281,True,298,298,schinese,14
+413150,Stardew Valley,Casual/Lightweight,225839904,1779109031,True,227,227,schinese,9
+413150,Stardew Valley,Casual/Lightweight,225839859,1779108985,True,10617,10617,schinese,13
+413150,Stardew Valley,Casual/Lightweight,225839060,1779108081,True,1960,1960,russian,667
+413150,Stardew Valley,Casual/Lightweight,225838755,1779107723,True,4238,4238,brazilian,849
+413150,Stardew Valley,Casual/Lightweight,225838702,1779107656,True,295,325,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225838544,1779107441,True,386,416,turkish,9
+413150,Stardew Valley,Casual/Lightweight,225838468,1779107364,True,386,416,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225838322,1779107187,True,55,55,spanish,13
+413150,Stardew Valley,Casual/Lightweight,225838234,1779107097,True,695,711,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225838099,1779106934,True,3697,3697,english,255
+413150,Stardew Valley,Casual/Lightweight,225838064,1779106889,True,41,75,schinese,647
+413150,Stardew Valley,Casual/Lightweight,225837967,1779106764,True,355,411,schinese,21
+413150,Stardew Valley,Casual/Lightweight,225837918,1779106696,True,397,428,schinese,8
+413150,Stardew Valley,Casual/Lightweight,225837862,1779106637,True,2040,2100,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225837760,1779106510,True,6365,6365,brazilian,11
+413150,Stardew Valley,Casual/Lightweight,225837747,1779106496,True,620,650,schinese,11
+413150,Stardew Valley,Casual/Lightweight,225837653,1779106400,True,740,740,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225837622,1779106346,True,89,89,schinese,23
+413150,Stardew Valley,Casual/Lightweight,225837499,1779106218,True,203,237,english,16
+413150,Stardew Valley,Casual/Lightweight,225837418,1779106125,True,7544,7544,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225837229,1779105894,True,7615,7615,schinese,377
+413150,Stardew Valley,Casual/Lightweight,225836973,1779105604,True,11183,11183,schinese,1
+413150,Stardew Valley,Casual/Lightweight,225836907,1779105513,True,5161,5236,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225836706,1779105251,True,2467,2467,schinese,24
+413150,Stardew Valley,Casual/Lightweight,225836690,1779105220,True,7905,7905,koreana,3
+413150,Stardew Valley,Casual/Lightweight,225836609,1779105128,True,1056,1056,tchinese,18
+413150,Stardew Valley,Casual/Lightweight,225836499,1779104995,True,4096,4096,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225836413,1779104892,True,1401,1401,english,24
+413150,Stardew Valley,Casual/Lightweight,225836402,1779104877,True,264,264,russian,4
+413150,Stardew Valley,Casual/Lightweight,225836143,1779104548,True,194,194,russian,14
+413150,Stardew Valley,Casual/Lightweight,225836069,1779104453,True,19597,19597,schinese,19
+413150,Stardew Valley,Casual/Lightweight,225836001,1779104377,True,209,299,english,26
+413150,Stardew Valley,Casual/Lightweight,225835975,1779104340,True,12756,12756,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225835829,1779104158,True,7835,7835,schinese,6
+413150,Stardew Valley,Casual/Lightweight,225835821,1779104148,True,6204,6303,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225835715,1779104028,True,217,245,koreana,6
+413150,Stardew Valley,Casual/Lightweight,225835503,1779103793,True,253,343,schinese,5
+413150,Stardew Valley,Casual/Lightweight,225835476,1779103770,True,535,593,koreana,61
+413150,Stardew Valley,Casual/Lightweight,225835124,1779103350,True,3208,3208,english,65
+413150,Stardew Valley,Casual/Lightweight,225835068,1779103264,True,1208,1250,schinese,10
+413150,Stardew Valley,Casual/Lightweight,225834967,1779103145,True,3417,3423,russian,2
+413150,Stardew Valley,Casual/Lightweight,225834845,1779102998,True,786,786,schinese,6
+413150,Stardew Valley,Casual/Lightweight,225834803,1779102912,True,1117,1117,russian,380
+413150,Stardew Valley,Casual/Lightweight,225834728,1779102814,True,105663,105757,english,182
+413150,Stardew Valley,Casual/Lightweight,225834303,1779102207,True,2595,2595,english,144
+413150,Stardew Valley,Casual/Lightweight,225834248,1779102155,True,3611,3678,russian,7
+413150,Stardew Valley,Casual/Lightweight,225834204,1779102098,True,5342,5342,schinese,13
+413150,Stardew Valley,Casual/Lightweight,225834033,1779101867,True,9551,9551,russian,15
+413150,Stardew Valley,Casual/Lightweight,225833988,1779101808,True,613,634,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225833925,1779101703,True,24992,24992,schinese,14
+413150,Stardew Valley,Casual/Lightweight,225833888,1779101646,True,4540,4630,russian,14
+413150,Stardew Valley,Casual/Lightweight,225833501,1779101106,True,4249,4399,english,12
+413150,Stardew Valley,Casual/Lightweight,225833284,1779100767,True,5958,5959,english,14
+413150,Stardew Valley,Casual/Lightweight,225833274,1779100751,True,253,253,schinese,23
+413150,Stardew Valley,Casual/Lightweight,225833244,1779100714,True,4066,4198,spanish,194
+413150,Stardew Valley,Casual/Lightweight,225832789,1779100060,True,554,633,english,11
+413150,Stardew Valley,Casual/Lightweight,225832606,1779099755,False,65,65,koreana,58
+413150,Stardew Valley,Casual/Lightweight,225832549,1779099656,True,313,313,russian,225
+413150,Stardew Valley,Casual/Lightweight,225832317,1779099315,True,13104,13104,schinese,317
+413150,Stardew Valley,Casual/Lightweight,225832187,1779099114,True,801,981,schinese,14
+413150,Stardew Valley,Casual/Lightweight,225831800,1779098529,True,622,652,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225831611,1779098214,True,4273,4273,russian,58
+413150,Stardew Valley,Casual/Lightweight,225831303,1779097766,True,4384,4491,english,34
+413150,Stardew Valley,Casual/Lightweight,225831263,1779097709,True,239,248,schinese,1
+413150,Stardew Valley,Casual/Lightweight,225831126,1779097549,True,16424,16424,schinese,1
+413150,Stardew Valley,Casual/Lightweight,225831012,1779097379,True,4166,4166,koreana,9
+413150,Stardew Valley,Casual/Lightweight,225830970,1779097307,True,2360,2361,turkish,18
+413150,Stardew Valley,Casual/Lightweight,225830811,1779097074,True,715,793,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225830491,1779096616,True,5485,5681,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225830211,1779096119,True,1183,1183,koreana,12
+413150,Stardew Valley,Casual/Lightweight,225829981,1779095743,True,6240,6240,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225829817,1779095494,True,10554,10554,russian,24
+413150,Stardew Valley,Casual/Lightweight,225829804,1779095461,True,11,11,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225829644,1779095219,True,3451,3451,english,10
+413150,Stardew Valley,Casual/Lightweight,225829611,1779095171,True,10199,10199,russian,33
+413150,Stardew Valley,Casual/Lightweight,225829223,1779094517,True,541,541,schinese,6
+413150,Stardew Valley,Casual/Lightweight,225829147,1779094382,True,207,230,english,22
+413150,Stardew Valley,Casual/Lightweight,225829044,1779094216,True,4798,4798,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225828952,1779094051,True,1437,1510,schinese,12
+413150,Stardew Valley,Casual/Lightweight,225828663,1779093534,True,5,5,portuguese,210
+413150,Stardew Valley,Casual/Lightweight,225828599,1779093450,True,1258,1261,vietnamese,8
+413150,Stardew Valley,Casual/Lightweight,225828178,1779092778,True,66815,66815,english,84
+413150,Stardew Valley,Casual/Lightweight,225828130,1779092699,True,5694,5781,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225827950,1779092364,True,215,329,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225827710,1779091945,True,391,395,english,16
+413150,Stardew Valley,Casual/Lightweight,225827673,1779091890,True,406,406,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225827666,1779091878,True,644,739,schinese,8
+413150,Stardew Valley,Casual/Lightweight,225827473,1779091558,True,26,26,english,2
+413150,Stardew Valley,Casual/Lightweight,225827345,1779091341,True,1970,2110,russian,26
+413150,Stardew Valley,Casual/Lightweight,225826368,1779089743,True,563,884,turkish,5
+413150,Stardew Valley,Casual/Lightweight,225826295,1779089610,True,16180,16184,schinese,9
+413150,Stardew Valley,Casual/Lightweight,225826110,1779089330,True,33190,33302,schinese,10
+413150,Stardew Valley,Casual/Lightweight,225826099,1779089313,True,418,528,english,23
+413150,Stardew Valley,Casual/Lightweight,225825716,1779088694,True,492,492,brazilian,9
+413150,Stardew Valley,Casual/Lightweight,225825108,1779087697,True,235,417,english,87
+413150,Stardew Valley,Casual/Lightweight,225824741,1779087097,True,8454,8454,english,5
+413150,Stardew Valley,Casual/Lightweight,225824725,1779087074,True,708,1029,schinese,7
+413150,Stardew Valley,Casual/Lightweight,225824696,1779087011,True,13,13,english,4
+413150,Stardew Valley,Casual/Lightweight,225824140,1779086090,True,2191,2474,english,12
+413150,Stardew Valley,Casual/Lightweight,225824012,1779085884,True,1940,1940,english,128
+413150,Stardew Valley,Casual/Lightweight,225823990,1779085845,True,451,665,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225823762,1779085462,True,6097,6218,english,1227
+413150,Stardew Valley,Casual/Lightweight,225823602,1779085177,True,200,389,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225823597,1779085169,True,425,573,english,34
+413150,Stardew Valley,Casual/Lightweight,225823527,1779085068,True,1050,1067,english,109
+413150,Stardew Valley,Casual/Lightweight,225823192,1779084477,True,985,1230,english,258
+413150,Stardew Valley,Casual/Lightweight,225823085,1779084322,True,1824,1994,english,10
+413150,Stardew Valley,Casual/Lightweight,225822822,1779083884,True,6905,7073,schinese,63
+413150,Stardew Valley,Casual/Lightweight,225822689,1779083665,True,3270,3270,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225822672,1779083633,True,3514,3641,schinese,41
+413150,Stardew Valley,Casual/Lightweight,225822640,1779083575,True,2002,2002,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225822293,1779082933,True,231,295,english,51
+413150,Stardew Valley,Casual/Lightweight,225822206,1779082781,True,2662,2662,english,8
+413150,Stardew Valley,Casual/Lightweight,225822147,1779082692,True,232,331,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225821989,1779082444,True,440,595,schinese,17
+413150,Stardew Valley,Casual/Lightweight,225821904,1779082296,True,270,398,schinese,13
+413150,Stardew Valley,Casual/Lightweight,225821806,1779082135,True,8801,8827,english,11
+413150,Stardew Valley,Casual/Lightweight,225821803,1779082125,True,163,163,english,64
+413150,Stardew Valley,Casual/Lightweight,225821622,1779081829,True,2312,2493,schinese,9
+413150,Stardew Valley,Casual/Lightweight,225821459,1779081544,True,717,1025,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225821355,1779081359,True,7353,7604,english,135
+413150,Stardew Valley,Casual/Lightweight,225821240,1779081196,True,5953,5996,spanish,8
+413150,Stardew Valley,Casual/Lightweight,225821210,1779081158,True,3521,4010,schinese,40
+413150,Stardew Valley,Casual/Lightweight,225820718,1779080370,True,952,1301,schinese,27
+413150,Stardew Valley,Casual/Lightweight,225820684,1779080308,True,359,465,spanish,14
+413150,Stardew Valley,Casual/Lightweight,225820648,1779080246,True,255,255,russian,12
+413150,Stardew Valley,Casual/Lightweight,225820601,1779080180,True,728,728,latam,80
+413150,Stardew Valley,Casual/Lightweight,225820144,1779079471,True,4049,4096,schinese,17
+413150,Stardew Valley,Casual/Lightweight,225820116,1779079419,True,380,599,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225820072,1779079353,True,572,572,english,4
+413150,Stardew Valley,Casual/Lightweight,225819968,1779079202,True,28240,28240,english,68
+413150,Stardew Valley,Casual/Lightweight,225819904,1779079112,True,4598,4862,schinese,6
+413150,Stardew Valley,Casual/Lightweight,225819792,1779078959,True,1299,1441,english,79
+413150,Stardew Valley,Casual/Lightweight,225819659,1779078746,True,715,778,english,27
+413150,Stardew Valley,Casual/Lightweight,225819491,1779078500,True,10169,10169,schinese,1
+413150,Stardew Valley,Casual/Lightweight,225819446,1779078448,True,456,532,spanish,4
+413150,Stardew Valley,Casual/Lightweight,225819398,1779078382,True,7923,7923,english,11
+413150,Stardew Valley,Casual/Lightweight,225818967,1779077767,False,2214,2214,russian,18
+413150,Stardew Valley,Casual/Lightweight,225818821,1779077532,True,6465,6465,english,169
+413150,Stardew Valley,Casual/Lightweight,225818552,1779077176,True,4264,4286,english,3
+413150,Stardew Valley,Casual/Lightweight,225818311,1779076799,True,12957,12957,english,4
+413150,Stardew Valley,Casual/Lightweight,225818051,1779076427,True,264,264,spanish,76
+413150,Stardew Valley,Casual/Lightweight,225817992,1779076357,True,1080,1080,latam,12
+413150,Stardew Valley,Casual/Lightweight,225817840,1779076144,True,24,24,schinese,19
+413150,Stardew Valley,Casual/Lightweight,225817720,1779075983,True,1538,1538,brazilian,20
+413150,Stardew Valley,Casual/Lightweight,225817648,1779075861,True,1717,1717,brazilian,35
+413150,Stardew Valley,Casual/Lightweight,225817463,1779075581,True,395,762,schinese,4
+413150,Stardew Valley,Casual/Lightweight,225817320,1779075401,True,1470,1593,spanish,67
+413150,Stardew Valley,Casual/Lightweight,225816859,1779074810,False,340,340,english,297
+413150,Stardew Valley,Casual/Lightweight,225816775,1779074682,True,1366,1426,english,246
+413150,Stardew Valley,Casual/Lightweight,225816767,1779074670,False,2641,2652,schinese,29
+413150,Stardew Valley,Casual/Lightweight,225816760,1779074658,True,626,684,english,16
+413150,Stardew Valley,Casual/Lightweight,225816695,1779074570,True,753,808,schinese,11
+413150,Stardew Valley,Casual/Lightweight,225816682,1779074552,True,5129,5129,spanish,260
+413150,Stardew Valley,Casual/Lightweight,225816671,1779074539,True,4047,4047,brazilian,9
+413150,Stardew Valley,Casual/Lightweight,225816331,1779074059,True,1381,1381,brazilian,59
+413150,Stardew Valley,Casual/Lightweight,225816290,1779073996,True,28549,28549,english,22
+413150,Stardew Valley,Casual/Lightweight,225816122,1779073792,True,6242,6242,english,17
+413150,Stardew Valley,Casual/Lightweight,225816034,1779073667,True,214,464,english,3
+413150,Stardew Valley,Casual/Lightweight,225815973,1779073579,True,10,10,russian,4
+413150,Stardew Valley,Casual/Lightweight,225815850,1779073425,True,1567,1567,latam,50
+413150,Stardew Valley,Casual/Lightweight,225815807,1779073352,True,193,385,schinese,5
+413150,Stardew Valley,Casual/Lightweight,225815711,1779073230,True,186,242,spanish,289
+413150,Stardew Valley,Casual/Lightweight,225815578,1779073061,False,8654,8972,english,39
+413150,Stardew Valley,Casual/Lightweight,225815535,1779073002,True,621,621,brazilian,1
+413150,Stardew Valley,Casual/Lightweight,225815255,1779072637,True,979,1076,spanish,7
+413150,Stardew Valley,Casual/Lightweight,225815115,1779072455,True,1105,1420,schinese,9
+413150,Stardew Valley,Casual/Lightweight,225814943,1779072174,True,508,510,spanish,12
+413150,Stardew Valley,Casual/Lightweight,225814824,1779072021,True,2384,2432,english,406
+413150,Stardew Valley,Casual/Lightweight,225814735,1779071911,True,208,267,spanish,15
+413150,Stardew Valley,Casual/Lightweight,225814439,1779071514,True,6867,6867,thai,15
+413150,Stardew Valley,Casual/Lightweight,225814415,1779071477,True,614,914,schinese,8
+413150,Stardew Valley,Casual/Lightweight,225814358,1779071401,True,14051,14131,english,12
+413150,Stardew Valley,Casual/Lightweight,225814001,1779070932,True,243,300,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225813934,1779070844,True,829,829,latam,13
+413150,Stardew Valley,Casual/Lightweight,225813896,1779070802,True,358,394,english,7
+413150,Stardew Valley,Casual/Lightweight,225813470,1779070214,True,10754,10754,english,405
+413150,Stardew Valley,Casual/Lightweight,225813455,1779070194,True,777,980,spanish,232
+413150,Stardew Valley,Casual/Lightweight,225813258,1779069938,True,10394,10394,english,144
+413150,Stardew Valley,Casual/Lightweight,225812905,1779069498,True,16864,16864,brazilian,3
+413150,Stardew Valley,Casual/Lightweight,225812865,1779069438,True,49,49,english,25
+413150,Stardew Valley,Casual/Lightweight,225812708,1779069240,True,2526,2526,english,4
+413150,Stardew Valley,Casual/Lightweight,225812569,1779069068,True,718,718,english,70
+413150,Stardew Valley,Casual/Lightweight,225812478,1779068966,True,4048,4048,english,38
+413150,Stardew Valley,Casual/Lightweight,225812380,1779068817,True,374,374,english,75
+413150,Stardew Valley,Casual/Lightweight,225812127,1779068500,True,388,406,english,24
+413150,Stardew Valley,Casual/Lightweight,225812046,1779068398,True,4299,4299,english,93
+413150,Stardew Valley,Casual/Lightweight,225811979,1779068332,True,69197,69411,english,128
+413150,Stardew Valley,Casual/Lightweight,225811767,1779068037,True,606,606,brazilian,7
+413150,Stardew Valley,Casual/Lightweight,225811740,1779067989,True,6612,6612,brazilian,86
+413150,Stardew Valley,Casual/Lightweight,225811659,1779067898,True,3225,3225,brazilian,9
+413150,Stardew Valley,Casual/Lightweight,225811567,1779067780,True,2461,2463,brazilian,33
+413150,Stardew Valley,Casual/Lightweight,225811239,1779067389,True,225,296,english,194
+413150,Stardew Valley,Casual/Lightweight,225811116,1779067240,True,365,556,schinese,66
+413150,Stardew Valley,Casual/Lightweight,225810932,1779067004,True,1170,1890,english,130
+413150,Stardew Valley,Casual/Lightweight,225810835,1779066891,True,17414,17475,latam,12
+413150,Stardew Valley,Casual/Lightweight,225810808,1779066852,True,263,351,english,32
+413150,Stardew Valley,Casual/Lightweight,225810722,1779066754,True,33665,33665,schinese,21
+413150,Stardew Valley,Casual/Lightweight,225810075,1779065912,True,352,454,english,10
+413150,Stardew Valley,Casual/Lightweight,225809861,1779065659,True,17386,17386,english,69
+413150,Stardew Valley,Casual/Lightweight,225809807,1779065589,True,216,273,brazilian,91
+413150,Stardew Valley,Casual/Lightweight,225809573,1779065345,True,1698,1698,brazilian,3
+413150,Stardew Valley,Casual/Lightweight,225809389,1779065151,True,205,205,brazilian,8
+413150,Stardew Valley,Casual/Lightweight,225809193,1779064884,True,6096,6299,english,96
+413150,Stardew Valley,Casual/Lightweight,225809173,1779064857,True,196,387,english,41
+413150,Stardew Valley,Casual/Lightweight,225809149,1779064830,True,752,752,german,10
+413150,Stardew Valley,Casual/Lightweight,225809002,1779064626,True,468,468,english,3
+413150,Stardew Valley,Casual/Lightweight,225808981,1779064600,True,2298,2298,brazilian,16
+413150,Stardew Valley,Casual/Lightweight,225808876,1779064467,True,36,38,brazilian,3
+413150,Stardew Valley,Casual/Lightweight,225808713,1779064262,True,283,283,brazilian,8
+413150,Stardew Valley,Casual/Lightweight,225808556,1779064079,True,258,381,brazilian,109
+413150,Stardew Valley,Casual/Lightweight,225808521,1779064025,True,12,12,english,24
+413150,Stardew Valley,Casual/Lightweight,225808515,1779064013,True,1492,1492,spanish,3
+413150,Stardew Valley,Casual/Lightweight,225808269,1779063712,True,443,750,spanish,105
+413150,Stardew Valley,Casual/Lightweight,225808222,1779063663,True,1587,1642,brazilian,11
+413150,Stardew Valley,Casual/Lightweight,225808139,1779063559,True,1492,1583,english,3
+413150,Stardew Valley,Casual/Lightweight,225808082,1779063506,True,257,323,brazilian,49
+413150,Stardew Valley,Casual/Lightweight,225807870,1779063261,True,7063,7063,brazilian,14
+413150,Stardew Valley,Casual/Lightweight,225807653,1779063030,True,2394,2394,english,142
+413150,Stardew Valley,Casual/Lightweight,225806874,1779062159,True,309,367,latam,103
+413150,Stardew Valley,Casual/Lightweight,225806646,1779061914,True,2447,2777,schinese,16
+413150,Stardew Valley,Casual/Lightweight,225806491,1779061740,True,939,939,brazilian,71
+413150,Stardew Valley,Casual/Lightweight,225806190,1779061350,True,2614,2614,english,12
+413150,Stardew Valley,Casual/Lightweight,225806149,1779061298,True,786,786,english,186
+413150,Stardew Valley,Casual/Lightweight,225805792,1779060843,True,456,776,english,102
+413150,Stardew Valley,Casual/Lightweight,225805607,1779060646,True,9451,9555,english,67
+413150,Stardew Valley,Casual/Lightweight,225805435,1779060469,True,239,326,latam,80
+413150,Stardew Valley,Casual/Lightweight,225805381,1779060411,True,893,1003,spanish,24
+413150,Stardew Valley,Casual/Lightweight,225804760,1779059708,True,9418,9418,latam,7
+413150,Stardew Valley,Casual/Lightweight,225804629,1779059566,True,2867,2960,english,22
+413150,Stardew Valley,Casual/Lightweight,225804500,1779059423,True,1311,1438,english,9
+413150,Stardew Valley,Casual/Lightweight,225804418,1779059312,True,12350,12418,brazilian,74
+413150,Stardew Valley,Casual/Lightweight,225803981,1779058804,True,667,669,brazilian,11
+413150,Stardew Valley,Casual/Lightweight,225803878,1779058708,True,258,258,brazilian,30
+413150,Stardew Valley,Casual/Lightweight,225803396,1779058179,True,652,652,english,6
+413150,Stardew Valley,Casual/Lightweight,225802918,1779057663,True,591,663,brazilian,3
+413150,Stardew Valley,Casual/Lightweight,225802889,1779057624,True,2419,2434,english,53
+413150,Stardew Valley,Casual/Lightweight,225802773,1779057518,True,3667,3667,english,33
+413150,Stardew Valley,Casual/Lightweight,225802434,1779057181,True,2198,2240,english,42
+413150,Stardew Valley,Casual/Lightweight,225802088,1779056818,True,472,742,english,284
+413150,Stardew Valley,Casual/Lightweight,225801519,1779056215,True,383,424,english,102
+413150,Stardew Valley,Casual/Lightweight,225801473,1779056164,True,246,361,latam,29
+413150,Stardew Valley,Casual/Lightweight,225801360,1779056047,True,11884,12724,english,93
+413150,Stardew Valley,Casual/Lightweight,225800911,1779055554,True,6674,6771,spanish,21
+413150,Stardew Valley,Casual/Lightweight,225800662,1779055322,True,18112,18112,english,20
+413150,Stardew Valley,Casual/Lightweight,225800359,1779055035,True,207,207,english,85
+413150,Stardew Valley,Casual/Lightweight,225800240,1779054925,True,797,797,russian,630
+413150,Stardew Valley,Casual/Lightweight,225800080,1779054787,True,2206,2222,brazilian,11
+413150,Stardew Valley,Casual/Lightweight,225799776,1779054495,True,616,616,brazilian,87
+413150,Stardew Valley,Casual/Lightweight,225799599,1779054301,True,8177,8496,brazilian,52
+413150,Stardew Valley,Casual/Lightweight,225799314,1779054041,True,235,235,spanish,19
+413150,Stardew Valley,Casual/Lightweight,225799150,1779053875,True,7018,7260,brazilian,7
+413150,Stardew Valley,Casual/Lightweight,225799106,1779053831,True,3144,3183,spanish,78
+413150,Stardew Valley,Casual/Lightweight,225798964,1779053686,True,189,189,english,77
+413150,Stardew Valley,Casual/Lightweight,225798757,1779053493,True,577,611,english,353
+413150,Stardew Valley,Casual/Lightweight,225798716,1779053457,True,2023,2023,english,13
+413150,Stardew Valley,Casual/Lightweight,225798266,1779053075,True,213,214,brazilian,9
+413150,Stardew Valley,Casual/Lightweight,225798136,1779052958,True,194,194,english,9
+413150,Stardew Valley,Casual/Lightweight,225798127,1779052952,True,481,967,english,64
+413150,Stardew Valley,Casual/Lightweight,225798097,1779052925,True,425,425,english,28
+413150,Stardew Valley,Casual/Lightweight,225797999,1779052843,True,4685,4737,russian,14
+413150,Stardew Valley,Casual/Lightweight,225797981,1779052828,True,9890,9916,polish,5
+413150,Stardew Valley,Casual/Lightweight,225797594,1779052468,True,4229,4229,brazilian,54
+413150,Stardew Valley,Casual/Lightweight,225797406,1779052306,True,6123,6123,brazilian,80
+413150,Stardew Valley,Casual/Lightweight,225797402,1779052302,True,8636,8746,english,20
+413150,Stardew Valley,Casual/Lightweight,225797327,1779052246,True,687,972,brazilian,58
+413150,Stardew Valley,Casual/Lightweight,225797207,1779052149,True,131,195,english,23
+413150,Stardew Valley,Casual/Lightweight,225797178,1779052132,True,4448,4448,brazilian,10
+413150,Stardew Valley,Casual/Lightweight,225797048,1779052028,True,11229,11265,spanish,3
+413150,Stardew Valley,Casual/Lightweight,225797019,1779052000,True,32117,32348,english,48
+413150,Stardew Valley,Casual/Lightweight,225796934,1779051932,True,546,546,russian,271
+413150,Stardew Valley,Casual/Lightweight,225796688,1779051716,True,866,867,spanish,2041
+413150,Stardew Valley,Casual/Lightweight,225796044,1779051181,False,24,24,english,27
+413150,Stardew Valley,Casual/Lightweight,225795677,1779050870,True,24197,24197,english,30
+413150,Stardew Valley,Casual/Lightweight,225795440,1779050683,True,1253,1424,schinese,3
+413150,Stardew Valley,Casual/Lightweight,225794525,1779049969,True,13954,14334,spanish,14
+413150,Stardew Valley,Casual/Lightweight,225794482,1779049932,True,221,404,english,4
+413150,Stardew Valley,Casual/Lightweight,225794421,1779049883,True,109,109,swedish,50
+413150,Stardew Valley,Casual/Lightweight,225794216,1779049722,True,16923,16978,english,61
+413150,Stardew Valley,Casual/Lightweight,225794161,1779049680,True,811,961,hungarian,83
+413150,Stardew Valley,Casual/Lightweight,225794000,1779049551,True,16324,16324,english,174
+413150,Stardew Valley,Casual/Lightweight,225793243,1779048965,True,21526,21544,english,9
+413150,Stardew Valley,Casual/Lightweight,225793233,1779048960,True,1116,1190,brazilian,193
+413150,Stardew Valley,Casual/Lightweight,225793227,1779048956,True,6004,6004,brazilian,0
+413150,Stardew Valley,Casual/Lightweight,225792831,1779048637,True,3126,3208,schinese,2
+413150,Stardew Valley,Casual/Lightweight,225792643,1779048493,True,532,554,english,11
+413150,Stardew Valley,Casual/Lightweight,225792639,1779048490,True,35157,35419,english,9
+413150,Stardew Valley,Casual/Lightweight,225792484,1779048387,True,7857,8260,english,46
+413150,Stardew Valley,Casual/Lightweight,225792305,1779048230,True,9500,9552,brazilian,98
+413150,Stardew Valley,Casual/Lightweight,225792276,1779048211,True,2440,2498,brazilian,9
+413150,Stardew Valley,Casual/Lightweight,225792253,1779048199,True,16842,16842,turkish,99
+413150,Stardew Valley,Casual/Lightweight,225792183,1779048145,True,233,233,schinese,10
+413150,Stardew Valley,Casual/Lightweight,225792182,1779048144,True,3594,3758,spanish,222
+413150,Stardew Valley,Casual/Lightweight,225792076,1779048064,True,3955,3974,brazilian,43
+413150,Stardew Valley,Casual/Lightweight,225790904,1779047149,True,6905,7116,russian,15
+413150,Stardew Valley,Casual/Lightweight,225790827,1779047089,True,354,374,russian,29
+292030,The Witcher 3,RPG,225820877,1779080630,False,4477,4627,schinese,9
+292030,The Witcher 3,RPG,225820600,1779080177,True,467,468,spanish,3
+292030,The Witcher 3,RPG,225819841,1779079030,True,6883,6883,ukrainian,45
+292030,The Witcher 3,RPG,225819276,1779078224,True,964,1121,english,783
+292030,The Witcher 3,RPG,225818811,1779077523,True,5479,5583,brazilian,46
+292030,The Witcher 3,RPG,225817966,1779076328,False,855,889,schinese,78
+292030,The Witcher 3,RPG,225817373,1779075471,True,1658,1658,english,38
+292030,The Witcher 3,RPG,225817237,1779075295,True,12874,12874,spanish,106
+292030,The Witcher 3,RPG,225817047,1779075057,True,1859,1859,russian,80
+292030,The Witcher 3,RPG,225816596,1779074445,True,4444,4444,english,4
+292030,The Witcher 3,RPG,225815758,1779073296,True,22285,22285,english,702
+292030,The Witcher 3,RPG,225815322,1779072728,True,8048,8048,schinese,9
+292030,The Witcher 3,RPG,225815068,1779072380,True,233,233,russian,781
+292030,The Witcher 3,RPG,225814412,1779071474,True,26091,26273,english,129
+292030,The Witcher 3,RPG,225813964,1779070879,True,2087,2300,english,40
+292030,The Witcher 3,RPG,225813437,1779070173,True,10721,10721,russian,160
+292030,The Witcher 3,RPG,225813288,1779069979,True,731,731,turkish,17
+292030,The Witcher 3,RPG,225811693,1779067939,True,4255,4255,brazilian,119
+292030,The Witcher 3,RPG,225809750,1779065518,True,11171,11171,english,126
+292030,The Witcher 3,RPG,225808949,1779064548,True,9275,9275,russian,61
+292030,The Witcher 3,RPG,225808348,1779063816,True,2627,2627,english,51
+292030,The Witcher 3,RPG,225808095,1779063514,True,50,52,russian,11
+292030,The Witcher 3,RPG,225806880,1779062161,True,4510,4516,brazilian,9
+292030,The Witcher 3,RPG,225805128,1779060099,True,3723,3872,english,16
+292030,The Witcher 3,RPG,225803624,1779058433,True,4585,4681,spanish,5
+292030,The Witcher 3,RPG,225803487,1779058298,True,9252,9274,spanish,7
+292030,The Witcher 3,RPG,225803311,1779058081,True,5903,6037,english,34
+292030,The Witcher 3,RPG,225803150,1779057904,True,7019,7019,russian,16
+292030,The Witcher 3,RPG,225801852,1779056571,True,8351,8351,german,4
+292030,The Witcher 3,RPG,225801696,1779056418,True,4109,4109,english,205
+292030,The Witcher 3,RPG,225800388,1779055059,True,1223,1253,schinese,122
+292030,The Witcher 3,RPG,225800235,1779054921,True,1195,1195,brazilian,11
+292030,The Witcher 3,RPG,225799360,1779054074,True,6365,6365,english,31
+292030,The Witcher 3,RPG,225799121,1779053847,False,304,304,russian,194
+292030,The Witcher 3,RPG,225798448,1779053232,True,15503,15503,russian,39
+292030,The Witcher 3,RPG,225797320,1779052240,False,4277,4277,english,726
+292030,The Witcher 3,RPG,225796064,1779051199,True,3878,3878,russian,75
+292030,The Witcher 3,RPG,225795989,1779051131,True,8824,8824,czech,148
+292030,The Witcher 3,RPG,225794878,1779050223,True,8298,8298,english,31
+292030,The Witcher 3,RPG,225794763,1779050130,True,724,790,russian,128
+292030,The Witcher 3,RPG,225794526,1779049972,True,2398,2398,english,0
+292030,The Witcher 3,RPG,225794402,1779049869,False,371,371,english,77
+292030,The Witcher 3,RPG,225794280,1779049787,True,7439,7439,schinese,33
+292030,The Witcher 3,RPG,225794238,1779049748,True,11566,11566,russian,72
+292030,The Witcher 3,RPG,225793632,1779049266,True,9005,9005,ukrainian,11
+292030,The Witcher 3,RPG,225793010,1779048770,True,3636,3636,english,66
+292030,The Witcher 3,RPG,225792910,1779048687,True,24089,24089,english,16
+292030,The Witcher 3,RPG,225791532,1779047625,True,8964,8967,schinese,19
+292030,The Witcher 3,RPG,225791260,1779047429,True,345,345,italian,28
+292030,The Witcher 3,RPG,225791041,1779047258,True,8862,8862,polish,38
+292030,The Witcher 3,RPG,225790878,1779047122,True,957,957,russian,16
+292030,The Witcher 3,RPG,225790614,1779046936,True,846,846,russian,116
+292030,The Witcher 3,RPG,225790482,1779046836,True,9263,9263,english,1472
+292030,The Witcher 3,RPG,225790215,1779046649,True,5936,5936,polish,45
+292030,The Witcher 3,RPG,225790114,1779046574,True,2371,2930,english,48
+292030,The Witcher 3,RPG,225789947,1779046453,True,6064,6210,german,8
+292030,The Witcher 3,RPG,225785389,1779043088,True,13559,13627,polish,2100
+292030,The Witcher 3,RPG,225782517,1779040911,True,2661,3228,spanish,63
+292030,The Witcher 3,RPG,225782055,1779040593,True,9197,9197,english,1
+292030,The Witcher 3,RPG,225780232,1779039289,True,1709,1951,german,187
+292030,The Witcher 3,RPG,225780090,1779039207,True,5864,5864,russian,1
+292030,The Witcher 3,RPG,225778720,1779038226,True,552,552,russian,80
+292030,The Witcher 3,RPG,225777712,1779037492,True,7933,8408,brazilian,53
+292030,The Witcher 3,RPG,225777497,1779037349,True,2308,2308,schinese,5
+292030,The Witcher 3,RPG,225777472,1779037332,True,394,450,english,0
+292030,The Witcher 3,RPG,225777393,1779037275,True,401,785,brazilian,40
+292030,The Witcher 3,RPG,225776957,1779036934,True,517,668,latam,24
+292030,The Witcher 3,RPG,225776432,1779036565,True,586,642,english,32
+292030,The Witcher 3,RPG,225776278,1779036443,False,300,300,turkish,3
+292030,The Witcher 3,RPG,225775965,1779036226,True,2508,2508,turkish,36
+292030,The Witcher 3,RPG,225775721,1779036041,False,637,637,english,16
+292030,The Witcher 3,RPG,225773862,1779034755,True,554,613,polish,789
+292030,The Witcher 3,RPG,225772409,1779033804,True,2035,2035,english,70
+292030,The Witcher 3,RPG,225771180,1779032931,True,5738,5738,schinese,2
+292030,The Witcher 3,RPG,225770579,1779032551,True,3054,3054,schinese,52
+292030,The Witcher 3,RPG,225770316,1779032359,True,13648,13648,english,25
+292030,The Witcher 3,RPG,225769486,1779031765,True,4792,4803,schinese,4
+292030,The Witcher 3,RPG,225769259,1779031625,True,255,255,schinese,7
+292030,The Witcher 3,RPG,225768746,1779031282,True,532,534,english,34
+292030,The Witcher 3,RPG,225768731,1779031270,True,1789,1789,schinese,58
+292030,The Witcher 3,RPG,225768521,1779031129,True,2709,2860,spanish,349
+292030,The Witcher 3,RPG,225768503,1779031115,True,3443,3443,ukrainian,30
+292030,The Witcher 3,RPG,225767929,1779030734,True,1747,1945,french,4
+292030,The Witcher 3,RPG,225767857,1779030683,True,4424,4444,turkish,143
+292030,The Witcher 3,RPG,225766592,1779029794,True,3150,3150,russian,27
+292030,The Witcher 3,RPG,225766121,1779029444,True,3403,3775,english,215
+292030,The Witcher 3,RPG,225765831,1779029229,True,1263,1417,french,33
+292030,The Witcher 3,RPG,225764003,1779027917,True,927,1491,russian,26
+292030,The Witcher 3,RPG,225763575,1779027610,True,1188,1188,english,8
+292030,The Witcher 3,RPG,225762163,1779026595,True,11860,11946,polish,143
+292030,The Witcher 3,RPG,225762131,1779026575,True,291,336,brazilian,82
+292030,The Witcher 3,RPG,225762111,1779026559,True,9554,9554,german,35
+292030,The Witcher 3,RPG,225761867,1779026386,True,5554,5554,english,38
+292030,The Witcher 3,RPG,225761427,1779026066,True,10066,10127,schinese,64
+292030,The Witcher 3,RPG,225761414,1779026058,True,6837,6864,english,36
+292030,The Witcher 3,RPG,225760802,1779025552,True,37,79,russian,11
+292030,The Witcher 3,RPG,225760212,1779025105,True,23711,23711,russian,19
+292030,The Witcher 3,RPG,225759139,1779024239,True,5662,5730,french,61
+292030,The Witcher 3,RPG,225758420,1779023716,True,5623,5695,english,9
+292030,The Witcher 3,RPG,225758348,1779023660,True,23081,23105,english,267
+292030,The Witcher 3,RPG,225756908,1779022451,True,17451,17601,english,146
+292030,The Witcher 3,RPG,225756564,1779022141,True,5158,5158,schinese,10
+292030,The Witcher 3,RPG,225754908,1779020679,True,5872,5931,german,4
+292030,The Witcher 3,RPG,225754562,1779020373,True,12470,12590,english,417
+292030,The Witcher 3,RPG,225753421,1779019438,True,181,181,russian,16
+292030,The Witcher 3,RPG,225752183,1779018307,False,2489,2489,schinese,4
+292030,The Witcher 3,RPG,225751389,1779017591,True,4377,4377,schinese,1
+292030,The Witcher 3,RPG,225751388,1779017591,True,10317,10436,schinese,8
+292030,The Witcher 3,RPG,225751197,1779017405,True,7962,7990,german,44
+292030,The Witcher 3,RPG,225749326,1779015558,True,6976,6976,english,960
+292030,The Witcher 3,RPG,225748986,1779015270,True,2653,2653,koreana,4
+292030,The Witcher 3,RPG,225748147,1779014417,True,927,1006,english,152
+292030,The Witcher 3,RPG,225747927,1779014202,True,1103,1103,english,3
+292030,The Witcher 3,RPG,225747754,1779014035,True,8858,8858,polish,64
+292030,The Witcher 3,RPG,225747091,1779013417,True,2843,2843,turkish,67
+292030,The Witcher 3,RPG,225746386,1779012738,True,2810,2810,russian,21
+292030,The Witcher 3,RPG,225746234,1779012581,True,4413,4413,russian,16
+292030,The Witcher 3,RPG,225745723,1779012079,True,1968,2130,schinese,16
+292030,The Witcher 3,RPG,225743639,1779010063,True,21961,22096,russian,8
+292030,The Witcher 3,RPG,225743607,1779010036,True,8693,9080,english,10
+292030,The Witcher 3,RPG,225742833,1779009241,True,4503,4503,russian,7
+292030,The Witcher 3,RPG,225742385,1779008785,True,11017,11017,english,154
+292030,The Witcher 3,RPG,225742376,1779008780,True,2334,2418,english,43
+292030,The Witcher 3,RPG,225740346,1779006647,True,69,260,spanish,127
+292030,The Witcher 3,RPG,225740284,1779006582,True,11041,11331,latam,135
+292030,The Witcher 3,RPG,225739781,1779006046,True,8704,8704,turkish,16
+292030,The Witcher 3,RPG,225738914,1779005129,True,15596,15850,german,1395
+292030,The Witcher 3,RPG,225737725,1779003810,True,4299,4584,russian,7
+292030,The Witcher 3,RPG,225737181,1779003209,True,328,472,english,23
+292030,The Witcher 3,RPG,225736805,1779002781,True,2605,2707,schinese,4
+292030,The Witcher 3,RPG,225736187,1779002059,True,3216,3216,english,18
+292030,The Witcher 3,RPG,225735835,1779001655,True,2836,3058,english,38
+292030,The Witcher 3,RPG,225735831,1779001650,True,3495,4274,turkish,175
+292030,The Witcher 3,RPG,225735181,1779000921,True,6588,6645,schinese,4
+292030,The Witcher 3,RPG,225734909,1779000596,True,389,389,polish,15
+292030,The Witcher 3,RPG,225733356,1778998780,False,16142,16616,german,748
+292030,The Witcher 3,RPG,225732541,1778997838,True,67585,67720,english,41
+292030,The Witcher 3,RPG,225729803,1778994726,True,5826,6371,english,122
+292030,The Witcher 3,RPG,225727867,1778992525,True,6896,7159,schinese,4
+292030,The Witcher 3,RPG,225725063,1778989352,False,631,631,russian,6
+292030,The Witcher 3,RPG,225724218,1778988418,True,7744,7944,english,512
+292030,The Witcher 3,RPG,225723041,1778987083,True,1457,1513,russian,16
+292030,The Witcher 3,RPG,225722880,1778986927,False,3645,3645,russian,1
+292030,The Witcher 3,RPG,225721453,1778985438,True,2354,2432,english,3
+292030,The Witcher 3,RPG,225721284,1778985276,True,5843,5843,english,714
+292030,The Witcher 3,RPG,225720502,1778984429,True,6111,6236,german,54
+292030,The Witcher 3,RPG,225717393,1778981164,True,4818,5210,brazilian,261
+292030,The Witcher 3,RPG,225714810,1778978435,True,940,940,polish,12
+292030,The Witcher 3,RPG,225713616,1778977133,True,645,857,schinese,77
+292030,The Witcher 3,RPG,225712802,1778976298,True,15140,15527,spanish,98
+292030,The Witcher 3,RPG,225712680,1778976173,True,3648,3787,swedish,9
+292030,The Witcher 3,RPG,225712184,1778975662,True,6971,6971,russian,1
+292030,The Witcher 3,RPG,225712077,1778975560,True,3295,3295,brazilian,27
+292030,The Witcher 3,RPG,225712039,1778975522,True,859,1996,brazilian,28
+292030,The Witcher 3,RPG,225711199,1778974667,False,476,476,turkish,9
+292030,The Witcher 3,RPG,225711030,1778974487,True,12531,12531,english,930
+292030,The Witcher 3,RPG,225710591,1778974044,False,5892,5892,english,52
+292030,The Witcher 3,RPG,225710244,1778973702,True,1995,1995,english,25
+292030,The Witcher 3,RPG,225709833,1778973291,True,3538,3538,english,126
+292030,The Witcher 3,RPG,225709018,1778972516,True,1247,1247,turkish,9
+292030,The Witcher 3,RPG,225707533,1778971049,True,5383,5383,english,11
+292030,The Witcher 3,RPG,225706368,1778970055,True,8043,8055,english,29
+292030,The Witcher 3,RPG,225706161,1778969870,False,69,69,brazilian,17
+292030,The Witcher 3,RPG,225704367,1778968329,True,7377,7959,schinese,1
+292030,The Witcher 3,RPG,225703605,1778967685,True,2527,2779,turkish,33
+292030,The Witcher 3,RPG,225703266,1778967389,True,2901,3054,polish,21
+292030,The Witcher 3,RPG,225702517,1778966775,True,210,210,russian,282
+292030,The Witcher 3,RPG,225700276,1778964986,True,4336,4336,english,7
+292030,The Witcher 3,RPG,225700270,1778964981,True,11128,11128,russian,292
+292030,The Witcher 3,RPG,225699104,1778964110,True,385,524,russian,735
+292030,The Witcher 3,RPG,225698701,1778963811,True,4039,4039,english,349
+292030,The Witcher 3,RPG,225698491,1778963644,True,453,487,portuguese,10
+292030,The Witcher 3,RPG,225697529,1778962889,True,9635,10186,spanish,4
+292030,The Witcher 3,RPG,225696120,1778961746,True,25007,25182,ukrainian,16
+292030,The Witcher 3,RPG,225694696,1778960689,True,1109,1329,ukrainian,70
+292030,The Witcher 3,RPG,225694522,1778960559,True,840,840,russian,123
+292030,The Witcher 3,RPG,225694271,1778960351,True,5332,5332,russian,414
+292030,The Witcher 3,RPG,225693861,1778960048,True,12802,12907,english,47
+292030,The Witcher 3,RPG,225692939,1778959392,True,13340,13340,russian,1253
+292030,The Witcher 3,RPG,225692175,1778958800,True,11377,11377,brazilian,14
+292030,The Witcher 3,RPG,225691873,1778958602,True,2669,2669,schinese,5
+292030,The Witcher 3,RPG,225691334,1778958226,True,6832,6832,russian,67
+292030,The Witcher 3,RPG,225691041,1778958015,True,11766,11766,turkish,110
+292030,The Witcher 3,RPG,225690410,1778957569,True,7929,7929,russian,416
+292030,The Witcher 3,RPG,225688524,1778956164,True,1355,1414,russian,1
+292030,The Witcher 3,RPG,225686715,1778954844,True,4892,4917,brazilian,8
+292030,The Witcher 3,RPG,225686419,1778954641,True,5682,5715,english,11
+292030,The Witcher 3,RPG,225685855,1778954250,True,5192,5223,russian,23
+292030,The Witcher 3,RPG,225685666,1778954114,True,4496,4496,french,50
+292030,The Witcher 3,RPG,225685463,1778953975,True,3106,3109,german,10
+292030,The Witcher 3,RPG,225685012,1778953670,True,5963,5963,russian,28
+292030,The Witcher 3,RPG,225684970,1778953638,True,377,377,spanish,2242
+292030,The Witcher 3,RPG,225684607,1778953395,True,6768,6995,polish,3
+292030,The Witcher 3,RPG,225684304,1778953162,True,16485,16485,english,1
+292030,The Witcher 3,RPG,225681601,1778951255,True,4158,4257,french,18
+292030,The Witcher 3,RPG,225681276,1778951018,True,832,834,english,12
+292030,The Witcher 3,RPG,225680378,1778950373,True,26616,26628,french,56
+292030,The Witcher 3,RPG,225679653,1778949879,True,1483,2012,schinese,1
+292030,The Witcher 3,RPG,225677899,1778948650,True,3849,3849,turkish,102
+292030,The Witcher 3,RPG,225675382,1778946911,True,1364,1364,spanish,10
+292030,The Witcher 3,RPG,225674873,1778946577,True,7315,7799,russian,38
+292030,The Witcher 3,RPG,225674415,1778946267,True,33350,33527,polish,5
+292030,The Witcher 3,RPG,225673889,1778945883,True,996,996,english,106
+292030,The Witcher 3,RPG,225673335,1778945491,True,4224,4224,schinese,37
+292030,The Witcher 3,RPG,225672359,1778944856,True,2442,2836,german,4
+292030,The Witcher 3,RPG,225671685,1778944385,True,8138,8431,polish,4
+292030,The Witcher 3,RPG,225670459,1778943588,True,8688,9011,english,14
+292030,The Witcher 3,RPG,225669851,1778943150,True,3765,3918,english,301
+292030,The Witcher 3,RPG,225669030,1778942585,True,223,287,english,130
+292030,The Witcher 3,RPG,225665260,1778939855,True,731,731,english,29
+292030,The Witcher 3,RPG,225664333,1778939201,True,311,730,italian,73
+292030,The Witcher 3,RPG,225662468,1778937742,True,12353,12637,russian,181
+292030,The Witcher 3,RPG,225662037,1778937411,False,5395,5676,schinese,3
+292030,The Witcher 3,RPG,225661343,1778936910,True,9382,9382,schinese,8
+292030,The Witcher 3,RPG,225658672,1778934685,True,8312,8615,czech,5
+292030,The Witcher 3,RPG,225658451,1778934490,True,754,754,turkish,34
+292030,The Witcher 3,RPG,225658390,1778934445,True,2788,3177,czech,0
+292030,The Witcher 3,RPG,225657959,1778934086,True,265,320,schinese,8
+292030,The Witcher 3,RPG,225656854,1778933107,True,2244,2624,english,301
+292030,The Witcher 3,RPG,225656785,1778933051,True,9628,9628,schinese,56
+292030,The Witcher 3,RPG,225655444,1778931909,True,5749,6101,english,4
+292030,The Witcher 3,RPG,225654519,1778931133,True,852,989,english,22
+292030,The Witcher 3,RPG,225653882,1778930630,True,142,142,english,8
+292030,The Witcher 3,RPG,225653053,1778929876,True,26210,26451,english,40
+292030,The Witcher 3,RPG,225652942,1778929762,True,950,950,russian,16
+292030,The Witcher 3,RPG,225652789,1778929613,True,3998,4804,spanish,124
+292030,The Witcher 3,RPG,225650550,1778927454,True,13237,13538,russian,59
+292030,The Witcher 3,RPG,225650190,1778927088,True,2165,2165,russian,15
+292030,The Witcher 3,RPG,225649686,1778926589,True,594,594,english,128
+292030,The Witcher 3,RPG,225648731,1778925702,True,5971,6760,english,8
+292030,The Witcher 3,RPG,225648132,1778925062,True,7688,8326,english,15
+292030,The Witcher 3,RPG,225646643,1778923557,True,9301,9770,english,55
+292030,The Witcher 3,RPG,225645248,1778922082,True,5345,5345,turkish,74
+292030,The Witcher 3,RPG,225644351,1778921111,True,223,549,polish,2
+292030,The Witcher 3,RPG,225644190,1778920932,True,7663,7780,schinese,8
+292030,The Witcher 3,RPG,225643945,1778920638,True,151,151,russian,18
+292030,The Witcher 3,RPG,225643798,1778920504,True,4850,5000,schinese,2
+292030,The Witcher 3,RPG,225643726,1778920438,True,974,1600,russian,29
+292030,The Witcher 3,RPG,225643254,1778919926,True,3976,4145,polish,15
+292030,The Witcher 3,RPG,225640049,1778916469,True,3720,3720,english,4
+292030,The Witcher 3,RPG,225639968,1778916369,True,1973,1973,english,67
+292030,The Witcher 3,RPG,225639611,1778915957,True,4852,4852,english,10
+292030,The Witcher 3,RPG,225639279,1778915589,True,5711,5711,russian,13
+292030,The Witcher 3,RPG,225638464,1778914673,True,8128,8128,russian,186
+292030,The Witcher 3,RPG,225638140,1778914303,True,6581,6665,english,13
+292030,The Witcher 3,RPG,225637956,1778914069,True,2803,2913,schinese,33
+292030,The Witcher 3,RPG,225635495,1778911206,True,288,335,polish,30
+292030,The Witcher 3,RPG,225634753,1778910328,True,241,294,latam,2
+292030,The Witcher 3,RPG,225633124,1778908538,True,8712,8835,schinese,2
+292030,The Witcher 3,RPG,225631774,1778907034,True,327,1310,english,5
+292030,The Witcher 3,RPG,225630742,1778905885,True,8108,8744,english,0
+292030,The Witcher 3,RPG,225629324,1778904357,True,1538,1543,schinese,16
+292030,The Witcher 3,RPG,225629223,1778904231,True,770,835,schinese,5
+292030,The Witcher 3,RPG,225628647,1778903599,True,4805,4823,tchinese,2
+292030,The Witcher 3,RPG,225628477,1778903418,True,1546,1694,schinese,4
+292030,The Witcher 3,RPG,225628213,1778903117,True,6070,6070,english,325
+292030,The Witcher 3,RPG,225627945,1778902825,True,5502,5502,english,409
+292030,The Witcher 3,RPG,225627280,1778902068,True,203,203,brazilian,11
+292030,The Witcher 3,RPG,225625878,1778900577,True,2126,2934,schinese,2
+292030,The Witcher 3,RPG,225624933,1778899579,True,681,986,schinese,451
+292030,The Witcher 3,RPG,225624555,1778899164,True,4350,4656,schinese,10
+292030,The Witcher 3,RPG,225624049,1778898625,True,3103,3749,english,34
+292030,The Witcher 3,RPG,225622925,1778897390,True,4245,4315,brazilian,283
+292030,The Witcher 3,RPG,225622657,1778897084,True,3963,4282,english,5858
+292030,The Witcher 3,RPG,225621467,1778895794,True,1927,1927,english,962
+292030,The Witcher 3,RPG,225621044,1778895329,True,1108,2843,english,27
+292030,The Witcher 3,RPG,225617561,1778891491,True,246,246,brazilian,18
+292030,The Witcher 3,RPG,225616867,1778890775,True,8320,8320,russian,32
+292030,The Witcher 3,RPG,225616198,1778890108,True,4381,4599,english,14
+292030,The Witcher 3,RPG,225615742,1778889663,True,925,1093,english,404
+292030,The Witcher 3,RPG,225615682,1778889599,True,2899,3233,english,702
+292030,The Witcher 3,RPG,225615483,1778889397,True,827,899,spanish,9
+292030,The Witcher 3,RPG,225615059,1778888984,True,2145,2145,spanish,10
+292030,The Witcher 3,RPG,225611849,1778885829,True,19409,19409,english,9
+292030,The Witcher 3,RPG,225609276,1778883549,True,572,572,russian,849
+292030,The Witcher 3,RPG,225609086,1778883389,True,6034,6132,ukrainian,52
+292030,The Witcher 3,RPG,225608594,1778882971,True,2403,3013,spanish,332
+292030,The Witcher 3,RPG,225607400,1778882023,True,5800,5914,english,554
+292030,The Witcher 3,RPG,225607189,1778881860,False,401,401,turkish,45
+292030,The Witcher 3,RPG,225605041,1778880220,True,12870,12870,turkish,63
+292030,The Witcher 3,RPG,225602648,1778878445,True,1623,1623,turkish,44
+292030,The Witcher 3,RPG,225602499,1778878338,True,7509,7549,brazilian,77
+292030,The Witcher 3,RPG,225602449,1778878300,True,2861,2965,english,166
+292030,The Witcher 3,RPG,225599785,1778876358,True,713,713,english,7
+292030,The Witcher 3,RPG,225599678,1778876293,True,8996,8996,russian,51
+292030,The Witcher 3,RPG,225598989,1778875792,True,9915,9915,english,3
+292030,The Witcher 3,RPG,225596992,1778874349,True,531,799,english,52
+292030,The Witcher 3,RPG,225595514,1778873224,True,245,245,english,354
+292030,The Witcher 3,RPG,225592760,1778871235,True,1243,2112,russian,101
+292030,The Witcher 3,RPG,225592667,1778871172,True,1857,1943,english,720
+292030,The Witcher 3,RPG,225590275,1778869420,True,11018,11018,russian,32
+292030,The Witcher 3,RPG,225589081,1778868564,True,950,1086,russian,10
+292030,The Witcher 3,RPG,225586818,1778866901,True,225,233,russian,36
+292030,The Witcher 3,RPG,225585338,1778865792,True,5875,6498,russian,1
+292030,The Witcher 3,RPG,225584998,1778865543,True,4542,4542,brazilian,655
+292030,The Witcher 3,RPG,225584784,1778865387,True,8245,8513,schinese,6
+292030,The Witcher 3,RPG,225584577,1778865253,True,3721,3782,english,28
+292030,The Witcher 3,RPG,225584112,1778864907,True,2194,2516,schinese,5
+292030,The Witcher 3,RPG,225583862,1778864725,True,855,1398,russian,3
+292030,The Witcher 3,RPG,225583790,1778864672,True,25521,25521,schinese,9
