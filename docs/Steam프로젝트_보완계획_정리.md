@@ -5,7 +5,7 @@
 - 프로젝트명: Steam 게임 할인에 따른 장르별 사용자 참여도 변화 분석
 - 팀원: 이승엽 (데이터 수집·전처리·PPT), 이동민 (분석·시각화·발표)
 - GitHub: https://github.com/LEE-SEUNG-YEOB/steam_discount_analysis
-- 데이터: 현재 기준 50개 게임 / 692건 할인 이벤트 / 7,732행 리뷰 시계열 (※ 플레이타임·긍정률 재수집 및 필터링 후 최종 분석 표본 수는 변동 가능)
+- 데이터: 55개 게임 / 808건 할인 이벤트 수집 / 유효 분석 이벤트 263건 / 개별 리뷰 약 257만 건 (review_individual.csv)
 - 장르: Action, RPG, Strategy/Sim, Adventure, Casual/Lightweight (각 10개)
 - 핵심 지표: Engagement 반응률 (할인 중 참여도 변화), Engagement 유지율 (할인 후 14일 참여도 변화)
 
