@@ -8,10 +8,8 @@
 381210,Dead by Daylight,Action,2016-06-14,797216,630223,166993,Action,19.99,True
 739630,Phasmophobia,Action,2020-09-18,768779,736611,32168,"Action,Indie,Early Access",19.99,True
 1174180,Red Dead Redemption 2,Action,2019-12-05,733542,676667,56875,"Action,Adventure",59.99,True
-346110,ARK: Survival Evolved,Action,2017-08-27,730170,612177,117993,"Action,Adventure,Indie,Massively Multiplayer,RPG",14.99,True
 413150,Stardew Valley,Casual/Lightweight,2016-02-26,886195,872384,13811,"Indie,RPG,Simulation",14.99,True
 1091500,Cyberpunk 2077,RPG,2020-12-09,844921,713071,131850,RPG,59.99,False
-292030,The Witcher 3: Wild Hunt,,2015-05-18,835349,802993,32356,RPG,39.99,False
 1086940,Baldur's Gate 3,RPG,2023-08-03,760662,736688,23974,"Adventure,RPG,Strategy",59.99,True
 218620,PAYDAY 2,Action,2013-08-13,663082,594327,68755,"Action,RPG",9.99,True
 892970,Valheim,RPG,2021-02-02,499828,471451,28377,"Action,Adventure,Indie,RPG,Early Access",19.99,True
@@ -22,7 +20,6 @@
 4000,Garry's Mod,Strategy/Simulation,2006-11-29,1159707,1122546,37161,"Casual,Indie,Simulation",9.99,True
 227300,Euro Truck Simulator 2,Strategy/Simulation,2012-10-12,867404,844480,22924,"Indie,Simulation",19.99,True
 242760,The Forest,Strategy/Simulation,2018-04-30,627791,599805,27986,"Action,Adventure,Indie,Simulation",19.99,True
-108600,Project Zomboid,Strategy/Simulation,2013-11-08,377063,355171,21892,"Indie,RPG,Simulation,Early Access",19.99,True
 251570,7 Days to Die,Strategy/Simulation,2024-07-25,370046,327889,42157,"Action,Adventure,Indie,RPG,Simulation,Strategy",44.99,True
 960090,Bloons TD 6,Strategy/Simulation,2018-12-17,353960,344269,9691,Strategy,13.99,True
 289070,Sid Meier’s Civilization VI,Strategy/Simulation,2016-10-20,349920,304053,45867,Strategy,59.99,True
@@ -48,9 +45,12 @@
 1144200,Ready or Not,Casual/Lightweight,2023-12-13,236196,210654,25542,"Action,Adventure,Indie",49.99,True
 526870,Satisfactory,Casual/Lightweight,2024-09-10,232064,225479,6585,"Adventure,Indie,Simulation,Strategy",39.99,True
 1468810,鬼谷八荒 Tale of Immortal,Casual/Lightweight,2023-05-26,227104,121020,106084,"Action,Adventure,Indie,RPG,Simulation",19.99,False
-427520,Factorio,Casual/Lightweight,2020-08-14,215209,208770,6439,"Casual,Indie,Simulation,Strategy",35.0,True
 1332010,Stray,Adventure,"Jul 19, 2022",156607,152312,4295,"Adventure,Indie",29.99,False
 1426210,It Takes Two,Adventure,"Mar 25, 2021",218383,208042,10341,"Action,Adventure",39.99,True
 870780,Control,Adventure,"Aug 27, 2020",50448,44045,6403,"Action,Adventure",39.99,False
 1057090,Ori and the Will of the Wisps,Adventure,"Mar 10, 2020",136690,131989,4701,Action,29.99,False
 294100,RimWorld,Strategy/Simulation,"Oct 17, 2018",210517,206216,4301,"Indie,Simulation,Strategy",34.99,False
+582010,Monster Hunter: World,Action,"Aug 8, 2018",493390,434239,59151,Action,29.99,True
+435150,Divinity: Original Sin 2,RPG,"Sep 14, 2017",190124,182166,7958,"Adventure,RPG,Strategy",44.99,True
+1794680,Vampire Survivors,Casual/Lightweight,"Oct 20, 2022",250334,246479,3855,"Action,Casual,Indie,RPG",4.99,True
+255710,Cities: Skylines,Strategy/Simulation,"Mar 10, 2015",275770,256362,19408,"Simulation,Strategy",29.99,False
