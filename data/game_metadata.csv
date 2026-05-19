@@ -1,19 +1,19 @@
 ﻿appid,name,genre_category,release_date,total_reviews,positive,negative,steam_genres,price_usd,is_multiplayer
 105600,Terraria,Action,2011-05-16,1409473,1373979,35494,"Action,Adventure,Indie,RPG",9.99,True
 252490,Rust,Action,2018-02-08,1227784,1071135,156649,"Action,Adventure,Indie,Massively Multiplayer,RPG",39.99,True
-2358720,Black Myth: Wukong,Action,2024-08-19,1150098,1111720,38378,"Action,Adventure,RPG",59.99,False
-1245620,ELDEN RING,Action,2022-02-24,1056677,981540,75137,"Action,RPG",59.99,True
+2358720,Black Myth: Wukong,RPG,2024-08-19,1150098,1111720,38378,"Action,Adventure,RPG",59.99,False
+1245620,ELDEN RING,RPG,2022-02-24,1056677,981540,75137,"Action,RPG",59.99,True
 553850,HELLDIVERS 2,Action,2024-02-08,1017635,775883,241752,Action,39.99,True
 550,Left 4 Dead 2,Action,2009-11-16,963983,940221,23762,Action,9.99,True
 381210,Dead by Daylight,Action,2016-06-14,797216,630223,166993,Action,19.99,True
 739630,Phasmophobia,Action,2020-09-18,768779,736611,32168,"Action,Indie,Early Access",19.99,True
 1174180,Red Dead Redemption 2,Action,2019-12-05,733542,676667,56875,"Action,Adventure",59.99,True
 346110,ARK: Survival Evolved,Action,2017-08-27,730170,612177,117993,"Action,Adventure,Indie,Massively Multiplayer,RPG",14.99,True
-413150,Stardew Valley,RPG,2016-02-26,886195,872384,13811,"Indie,RPG,Simulation",14.99,True
+413150,Stardew Valley,Casual/Lightweight,2016-02-26,886195,872384,13811,"Indie,RPG,Simulation",14.99,True
 1091500,Cyberpunk 2077,RPG,2020-12-09,844921,713071,131850,RPG,59.99,False
-292030,The Witcher 3: Wild Hunt,RPG,2015-05-18,835349,802993,32356,RPG,39.99,False
+292030,The Witcher 3: Wild Hunt,,2015-05-18,835349,802993,32356,RPG,39.99,False
 1086940,Baldur's Gate 3,RPG,2023-08-03,760662,736688,23974,"Adventure,RPG,Strategy",59.99,True
-218620,PAYDAY 2,RPG,2013-08-13,663082,594327,68755,"Action,RPG",9.99,True
+218620,PAYDAY 2,Action,2013-08-13,663082,594327,68755,"Action,RPG",9.99,True
 892970,Valheim,RPG,2021-02-02,499828,471451,28377,"Action,Adventure,Indie,RPG,Early Access",19.99,True
 322330,Don't Starve Together,RPG,2016-04-21,499061,475393,23668,"Action,Adventure,Indie,RPG,Simulation,Strategy",14.99,True
 239140,Dying Light,RPG,2015-01-26,457632,435687,21945,"Action,RPG",24.99,True
@@ -35,17 +35,22 @@
 367520,Hollow Knight,Adventure,2017-02-24,415946,403641,12305,"Action,Adventure,Indie",14.99,False
 1172620,Sea of Thieves: 2025 Edition,Adventure,2020-06-03,355238,317074,38164,"Action,Adventure",39.99,True
 275850,No Man's Sky,Adventure,2016-08-12,352858,293332,59526,"Action,Adventure",59.99,True
-814380,Sekiro: Shadows Die Twice - GOTY Edition,Adventure,2019-03-21,322234,307041,15193,"Action,Adventure",59.99,False
-990080,Hogwarts Legacy,Adventure,2023-02-10,321395,289966,31429,"Action,Adventure,RPG",59.99,False
+814380,Sekiro: Shadows Die Twice - GOTY Edition,Action,2019-03-21,322234,307041,15193,"Action,Adventure",59.99,False
+990080,Hogwarts Legacy,RPG,2023-02-10,321395,289966,31429,"Action,Adventure,RPG",59.99,False
 264710,Subnautica,Adventure,2018-01-23,313707,304449,9258,"Adventure,Indie",29.99,False
-1517290,Battlefield 2042,Adventure,2021-11-19,297774,139186,158588,"Action,Adventure,Casual",59.99,True
-632360,Risk of Rain 2,Casual/Indie,2020-08-11,313577,293127,20450,"Action,Indie",24.99,True
-1118200,People Playground,Casual/Indie,2019-07-23,281763,277746,4017,"Action,Casual,Indie,Simulation",9.99,False
-1145360,Hades,Casual/Indie,2020-09-17,279741,274829,4912,"Action,Indie,RPG",24.99,False
-391540,Undertale,Casual/Indie,2015-09-15,272932,264082,8850,"Indie,RPG",9.99,False
-261550,Mount & Blade II: Bannerlord,Casual/Indie,2022-10-25,264391,232360,32031,"Action,Indie,RPG,Simulation,Strategy",49.99,True
-1326470,Sons Of The Forest,Casual/Indie,2024-02-22,253546,222495,31051,"Action,Adventure,Indie,Simulation",29.99,True
-1144200,Ready or Not,Casual/Indie,2023-12-13,236196,210654,25542,"Action,Adventure,Indie",49.99,True
-526870,Satisfactory,Casual/Indie,2024-09-10,232064,225479,6585,"Adventure,Indie,Simulation,Strategy",39.99,True
-1468810,鬼谷八荒 Tale of Immortal,Casual/Indie,2023-05-26,227104,121020,106084,"Action,Adventure,Indie,RPG,Simulation",19.99,False
-427520,Factorio,Casual/Indie,2020-08-14,215209,208770,6439,"Casual,Indie,Simulation,Strategy",35.0,True
+1517290,Battlefield 2042,Action,2021-11-19,297774,139186,158588,"Action,Adventure,Casual",59.99,True
+632360,Risk of Rain 2,Casual/Lightweight,2020-08-11,313577,293127,20450,"Action,Indie",24.99,True
+1118200,People Playground,Casual/Lightweight,2019-07-23,281763,277746,4017,"Action,Casual,Indie,Simulation",9.99,False
+1145360,Hades,Casual/Lightweight,2020-09-17,279741,274829,4912,"Action,Indie,RPG",24.99,False
+391540,Undertale,Casual/Lightweight,2015-09-15,272932,264082,8850,"Indie,RPG",9.99,False
+261550,Mount & Blade II: Bannerlord,Casual/Lightweight,2022-10-25,264391,232360,32031,"Action,Indie,RPG,Simulation,Strategy",49.99,True
+1326470,Sons Of The Forest,Casual/Lightweight,2024-02-22,253546,222495,31051,"Action,Adventure,Indie,Simulation",29.99,True
+1144200,Ready or Not,Casual/Lightweight,2023-12-13,236196,210654,25542,"Action,Adventure,Indie",49.99,True
+526870,Satisfactory,Casual/Lightweight,2024-09-10,232064,225479,6585,"Adventure,Indie,Simulation,Strategy",39.99,True
+1468810,鬼谷八荒 Tale of Immortal,Casual/Lightweight,2023-05-26,227104,121020,106084,"Action,Adventure,Indie,RPG,Simulation",19.99,False
+427520,Factorio,Casual/Lightweight,2020-08-14,215209,208770,6439,"Casual,Indie,Simulation,Strategy",35.0,True
+1332010,Stray,Adventure,"Jul 19, 2022",156607,152312,4295,"Adventure,Indie",29.99,False
+1426210,It Takes Two,Adventure,"Mar 25, 2021",218383,208042,10341,"Action,Adventure",39.99,True
+870780,Control,Adventure,"Aug 27, 2020",50448,44045,6403,"Action,Adventure",39.99,False
+1057090,Ori and the Will of the Wisps,Adventure,"Mar 10, 2020",136690,131989,4701,Action,29.99,False
+294100,RimWorld,Strategy/Simulation,"Oct 17, 2018",210517,206216,4301,"Indie,Simulation,Strategy",34.99,False
