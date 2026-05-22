@@ -26,3 +26,17 @@ Thumbs.db
 
 # GPT Codex / OMX
 .omx/
+
+# Large local data (절대 커밋 금지)
+data/review_individual.csv
+data/review_individual.parquet
+data/raw/
+*.parquet
+
+# Node
+node_modules/
+.next/
+out/
+web/node_modules/
+web/.next/
+web/out/
