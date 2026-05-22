@@ -9,7 +9,8 @@
       "Bash(python notebooks/run_analysis_temp.py)",
       "Bash(python -c \"import scipy; print\\(scipy.__version__\\)\")",
       "Bash(python -c ' *)",
-      "WebFetch(domain:chatgpt.com)"
+      "WebFetch(domain:chatgpt.com)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\alvin\\\\OneDrive\\\\바탕 화면\\\\WorkSpace\\\\steam_discount_analysis\\\\scripts\\\\prepare_sentiment_data.py\")"
     ]
   }
 }
