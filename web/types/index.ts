@@ -7,6 +7,16 @@ export type Genre =
 
 export type Confidence = "strong" | "exploratory"
 
+export type ReviewType = "all" | "positive" | "negative"
+
+export type SentimentGroup =
+  | "up"
+  | "neutral"
+  | "down"
+  | "positive_rate_up"
+  | "positive_rate_flat"
+  | "positive_rate_down"
+
 export interface SummaryData {
   games_count: number
   discount_events_collected: number
@@ -42,18 +52,29 @@ export interface GameReport {
 
 export interface DashboardEvent {
   event_id: string
-  app_id: number
+  appid: number
   game_name: string
-  genre: Genre
-  is_season_sale: boolean
+  genre: string
+  discount_start: string
   playtime_filter: "all" | "2h" | "10h"
-  discount_rate: number
-  response_rate_all: number
-  retention_rate: number
+  discount_rate?: number
+  is_season_sale?: boolean
+
+  response_rate_all?: number
+  response_rate_positive?: number
+  response_rate_negative?: number
+  retention_rate?: number
+
+  positive_count_before?: number
+  positive_count_during?: number
+  negative_count_before?: number
+  negative_count_during?: number
+
   positive_rate_before?: number
   positive_rate_during?: number
   positive_rate_delta?: number
-  sentiment_group?: "positive_rate_up" | "positive_rate_flat" | "positive_rate_down"
+  sentiment_group?: SentimentGroup
+
   valid_event_count_for_genre?: number
 }
 
