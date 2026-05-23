@@ -1,6 +1,36 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import type { GameReport } from "@/types"
 import { PageHeader } from "@/components/layout/PageHeader"
+import { GameSelector } from "@/components/report/GameSelector"
+import { ReportPanel } from "@/components/report/ReportPanel"
+import { ReportDownloadButton } from "@/components/report/ReportDownloadButton"
 
 export default function ReportPage() {
+  const [reports, setReports] = useState<GameReport[]>([])
+  const [loading, setLoading] = useState(true)
+  const [loadError, setLoadError] = useState(false)
+  const [selectedId, setSelectedId] = useState<number | null>(null)
+
+  useEffect(() => {
+    fetch("/data/game_reports.json")
+      .then((r) => {
+        if (!r.ok) throw new Error("fetch 실패")
+        return r.json()
+      })
+      .then((data: GameReport[]) => {
+        setReports(data)
+        setLoading(false)
+      })
+      .catch(() => {
+        setLoadError(true)
+        setLoading(false)
+      })
+  }, [])
+
+  const selectedGame = reports.find((r) => r.appid === selectedId) ?? null
+
   return (
     <div className="container mx-auto px-4 py-8">
       <PageHeader
@@ -8,51 +38,63 @@ export default function ReportPage() {
         description="게임을 선택하면 과거 할인 이력, 반응률, 장르 평균 비교를 자동으로 정리합니다."
       />
 
-      {/* Game selector placeholder */}
-      <div className="mb-6 rounded-lg border p-4 flex items-center gap-3">
-        <span className="text-sm text-muted-foreground">게임 선택:</span>
-        <div className="rounded border bg-muted/30 px-4 py-2 text-sm text-muted-foreground w-64">
-          GameSelector 드롭다운 자리
+      {/* 로딩 / 에러 */}
+      {loading && (
+        <div className="flex h-32 items-center justify-center text-sm text-muted-foreground">
+          데이터 로딩 중...
         </div>
-      </div>
+      )}
 
-      {/* Metric cards placeholder */}
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4 mb-6">
-        {["평균 할인율", "최고 할인율", "평균 반응률", "평균 유지율"].map((label) => (
-          <div key={label} className="rounded-lg border p-4 text-center">
-            <p className="text-xs text-muted-foreground mb-1">{label}</p>
-            <p className="text-2xl font-bold text-muted-foreground">—</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Comparison placeholder */}
-      <div className="grid gap-4 md:grid-cols-2 mb-6">
-        <div className="rounded-lg border p-4 h-48 flex items-center justify-center bg-muted/20">
-          <p className="text-sm text-muted-foreground">반응률 비교 차트 자리 (게임 vs 장르 중앙값 vs 전체 중앙값)</p>
+      {loadError && (
+        <div className="rounded-lg border border-destructive/50 p-4 text-sm text-destructive">
+          데이터 파일을 찾을 수 없습니다.{" "}
+          <code className="font-mono">python scripts/build_app_data.py</code>를 실행한 뒤 새로고침하세요.
         </div>
-        <div className="grid grid-rows-2 gap-3">
-          <div className="rounded-lg border p-4 flex items-center justify-center bg-muted/20">
-            <p className="text-sm text-muted-foreground">시즌 세일 반응률 자리</p>
-          </div>
-          <div className="rounded-lg border p-4 flex items-center justify-center bg-muted/20">
-            <p className="text-sm text-muted-foreground">비시즌 할인 반응률 자리</p>
-          </div>
-        </div>
-      </div>
+      )}
 
-      {/* Auto comment placeholder */}
-      <div className="rounded-lg border bg-muted/10 p-5 mb-4">
-        <h3 className="font-semibold text-sm mb-2">자동 해석 코멘트</h3>
-        <p className="text-sm text-muted-foreground">
-          게임을 선택하면 실제 이벤트 수, 평균 반응률, 장르 중앙값, 시즌/비시즌 비교 수치를 포함한 자동 코멘트가 표시됩니다.
-        </p>
-      </div>
+      {/* 게임 선택 */}
+      {!loading && !loadError && (
+        <>
+          <div className="mb-6 flex flex-wrap items-center gap-3">
+            <span className="text-sm text-muted-foreground whitespace-nowrap">
+              게임 선택 ({reports.length}개):
+            </span>
+            <GameSelector
+              games={reports}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+            />
+            {selectedGame && (
+              <ReportDownloadButton game={selectedGame} />
+            )}
+          </div>
 
-      {/* Download placeholder */}
-      <div className="rounded border px-4 py-2 text-sm text-muted-foreground inline-block">
-        Markdown 다운로드 버튼 자리
-      </div>
+          {/* 게임 미선택 안내 */}
+          {!selectedGame && (
+            <div className="flex h-48 items-center justify-center rounded-lg border bg-muted/20">
+              <p className="text-sm text-muted-foreground text-center px-4">
+                위 드롭다운에서 게임을 선택하면
+                <br />
+                할인 이력, 반응률, 장르 비교, 자동 코멘트가 표시됩니다.
+              </p>
+            </div>
+          )}
+
+          {/* 유효 이벤트 0건 안내 */}
+          {selectedGame && selectedGame.valid_event_count === 0 && (
+            <div className="flex h-32 items-center justify-center rounded-lg border bg-muted/20">
+              <p className="text-sm text-muted-foreground">
+                이 게임은 유효 할인 이벤트가 없어 리포트를 생성할 수 없습니다. 다른 게임을 선택해 주세요.
+              </p>
+            </div>
+          )}
+
+          {/* 리포트 */}
+          {selectedGame && selectedGame.valid_event_count > 0 && (
+            <ReportPanel game={selectedGame} />
+          )}
+        </>
+      )}
     </div>
   )
 }

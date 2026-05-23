@@ -35,9 +35,9 @@ export interface GameInfo {
 }
 
 export interface GameReport {
-  app_id: number
+  appid: number
   name: string
-  genre: Genre
+  genre: string
   valid_event_count: number
   avg_discount_rate: number
   max_discount_rate: number

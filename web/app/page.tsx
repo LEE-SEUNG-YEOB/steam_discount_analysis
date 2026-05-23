@@ -1,10 +1,39 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import type { SummaryData } from "@/types"
 import { PageHeader } from "@/components/layout/PageHeader"
 import { MetricCard } from "@/components/common/MetricCard"
 import { SectionTitle } from "@/components/common/SectionTitle"
 import { Button } from "@/components/ui/button"
 
+function formatReviews(n: number): string {
+  if (n >= 10_000) return `${Math.floor(n / 10_000)}만+`
+  return n.toLocaleString("ko-KR")
+}
+
+const FALLBACK: SummaryData = {
+  games_count: 55,
+  discount_events_collected: 808,
+  valid_events: 263,
+  reviews_count: 2_570_000,
+  main_message:
+    "할인은 단기 유입을 만들지만, 그 유입이 장기 유지나 긍정적 경험으로 이어지는지는 조건에 따라 달랐습니다.",
+}
+
 export default function HomePage() {
+  const [summary, setSummary] = useState<SummaryData>(FALLBACK)
+
+  useEffect(() => {
+    fetch("/data/summary.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data: SummaryData | null) => {
+        if (data) setSummary(data)
+      })
+      .catch(() => {})
+  }, [])
+
   return (
     <div className="container mx-auto px-4 py-8">
       <PageHeader
@@ -14,17 +43,15 @@ export default function HomePage() {
 
       <div className="mb-8 rounded-lg border bg-amber-50 p-5">
         <p className="text-xs text-muted-foreground mb-1">핵심 메시지</p>
-        <p className="text-base font-semibold leading-relaxed">
-          할인은 단기 유입을 만들지만, 그 유입이 장기 유지나 긍정적 경험으로 이어지는지는 조건에 따라 달랐습니다.
-        </p>
+        <p className="text-base font-semibold leading-relaxed">{summary.main_message}</p>
       </div>
 
       <SectionTitle>데이터 규모</SectionTitle>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mb-10">
-        <MetricCard title="분석 게임 수" value="55" unit="개" />
-        <MetricCard title="수집 할인 이벤트" value="808" unit="건" />
-        <MetricCard title="유효 분석 이벤트" value="263" unit="건" />
-        <MetricCard title="수집 리뷰" value="257만+" unit="건" />
+        <MetricCard title="분석 게임 수" value={summary.games_count} unit="개" />
+        <MetricCard title="수집 할인 이벤트" value={summary.discount_events_collected} unit="건" />
+        <MetricCard title="유효 분석 이벤트" value={summary.valid_events} unit="건" />
+        <MetricCard title="수집 리뷰" value={formatReviews(summary.reviews_count)} unit="건" />
       </div>
 
       <SectionTitle>주요 기능</SectionTitle>

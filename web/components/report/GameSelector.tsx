@@ -12,7 +12,7 @@ interface GameSelectorProps {
 export function GameSelector({ games, selectedId, onSelect }: GameSelectorProps) {
   return (
     <Select
-      value={selectedId?.toString() ?? ""}
+      value={selectedId !== null ? selectedId.toString() : ""}
       onValueChange={(val) => onSelect(parseInt(val))}
     >
       <SelectTrigger className="w-full md:w-96">
@@ -20,7 +20,7 @@ export function GameSelector({ games, selectedId, onSelect }: GameSelectorProps)
       </SelectTrigger>
       <SelectContent>
         {games.map((game) => (
-          <SelectItem key={game.app_id} value={game.app_id.toString()}>
+          <SelectItem key={game.appid} value={game.appid.toString()}>
             {game.name} ({game.genre})
           </SelectItem>
         ))}
