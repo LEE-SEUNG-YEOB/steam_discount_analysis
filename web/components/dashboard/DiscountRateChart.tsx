@@ -1,10 +1,12 @@
 "use client"
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
-import type { DashboardEvent } from "@/types"
+import type { DashboardEvent, ReviewType } from "@/types"
+import { getResponseRate } from "@/lib/filter"
 
 interface DiscountRateChartProps {
   events: DashboardEvent[]
+  reviewType?: ReviewType
 }
 
 const BINS = [
@@ -14,13 +16,16 @@ const BINS = [
   { label: "70%+", min: 70, max: 101 },
 ]
 
-export function DiscountRateChart({ events }: DiscountRateChartProps) {
+export function DiscountRateChart({ events, reviewType = "all" }: DiscountRateChartProps) {
   const data = BINS.map((bin) => {
-    const binEvents = events.filter((e) => e.discount_rate >= bin.min && e.discount_rate < bin.max)
-    const avg = binEvents.length
-      ? binEvents.reduce((s, e) => s + e.response_rate_all, 0) / binEvents.length
-      : 0
-    return { label: bin.label, 반응률: parseFloat(avg.toFixed(3)), n: binEvents.length }
+    const binEvents = events.filter(
+      (e) => (e.discount_rate ?? 0) >= bin.min && (e.discount_rate ?? 0) < bin.max
+    )
+    const values = binEvents
+      .map((e) => getResponseRate(e, reviewType))
+      .filter((v): v is number => v !== null && v !== undefined)
+    const avg = values.length ? values.reduce((s, v) => s + v, 0) / values.length : 0
+    return { label: bin.label, 반응률: parseFloat(avg.toFixed(3)), n: values.length }
   })
 
   return (

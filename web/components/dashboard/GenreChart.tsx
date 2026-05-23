@@ -1,20 +1,23 @@
 "use client"
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
-import type { DashboardEvent } from "@/types"
+import type { DashboardEvent, ReviewType } from "@/types"
 import { GENRES } from "@/lib/constants"
+import { getResponseRate } from "@/lib/filter"
 
 interface GenreChartProps {
   events: DashboardEvent[]
+  reviewType?: ReviewType
 }
 
-export function GenreChart({ events }: GenreChartProps) {
+export function GenreChart({ events, reviewType = "all" }: GenreChartProps) {
   const data = GENRES.map((genre) => {
     const genreEvents = events.filter((e) => e.genre === genre)
-    const avg = genreEvents.length
-      ? genreEvents.reduce((s, e) => s + e.response_rate_all, 0) / genreEvents.length
-      : 0
-    return { genre, 반응률: parseFloat(avg.toFixed(3)), n: genreEvents.length }
+    const values = genreEvents
+      .map((e) => getResponseRate(e, reviewType))
+      .filter((v): v is number => v !== null && v !== undefined)
+    const avg = values.length ? values.reduce((s, v) => s + v, 0) / values.length : 0
+    return { genre, 반응률: parseFloat(avg.toFixed(3)), n: values.length }
   })
 
   return (
