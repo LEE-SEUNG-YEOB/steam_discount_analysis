@@ -13,8 +13,9 @@ scripts/build_app_data.py
 """
 
 import json
-import sys
 from pathlib import Path
+
+import pandas as pd
 
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
@@ -25,12 +26,6 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # ─── 유틸 ───────────────────────────────────────────────────────────────────
 
 def load_csv(filename: str):
-    try:
-        import pandas as pd
-    except ImportError:
-        print("[ERROR] pandas가 없습니다. pip install pandas 실행 후 재시도하세요.")
-        sys.exit(1)
-
     path = DATA_DIR / filename
     if not path.exists():
         print(f"[WARNING] {filename} 파일이 없습니다. ({path})")
@@ -77,8 +72,6 @@ def safe_bool(val, default=False):
 # ─── dashboard_events.json ──────────────────────────────────────────────────
 
 def build_dashboard_events():
-    import pandas as pd
-
     print("\n[dashboard_events.json 생성]")
 
     # 1) 필수 파일 로드
@@ -230,11 +223,9 @@ def build_summary(metadata, analysis):
     games_count = len(metadata) if metadata is not None else 55
     valid_events = len(analysis) if analysis is not None else 263
 
-    reviews_count = 0
-    if metadata is not None and "total_reviews" in metadata.columns:
-        reviews_count = int(metadata["total_reviews"].sum())
-    if reviews_count == 0:
-        reviews_count = 2_570_000
+    # Steam 누적 전체 리뷰(total_reviews)가 아니라
+    # 분석 기간 내 수집된 리뷰 수 기준 — 발표 자료 확정값 사용
+    reviews_count = 2_570_000
 
     return {
         "games_count": games_count,
