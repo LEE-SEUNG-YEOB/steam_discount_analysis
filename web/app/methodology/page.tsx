@@ -69,6 +69,17 @@ export default function MethodologyPage() {
             <li>플레이타임 필터는 리뷰 작성 시점 기준이므로 실제 플레이 패턴과 다를 수 있습니다.</li>
           </ul>
         </section>
+
+        <Separator />
+
+        <section>
+          <h2 className="text-lg font-semibold mb-3">긍정/부정 리뷰 필터 이벤트 수 차이 (263건 vs 261건)</h2>
+          <p className="text-sm text-muted-foreground">
+            긍정/부정 리뷰 필터는 긍정·부정 리뷰 수가 모두 계산 가능한 이벤트만 사용했습니다. 따라서 전체
+            유효 분석 이벤트 263건 중 일부 이벤트가 제외되어 261건 기준으로 계산될 수 있습니다. 이 차이는
+            데이터 결측 또는 리뷰 수 부족에 따른 필터링 결과입니다.
+          </p>
+        </section>
       </div>
     </div>
   )

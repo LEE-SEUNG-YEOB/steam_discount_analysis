@@ -1,0 +1,497 @@
+[
+  {
+    "appid": 251570,
+    "name": "7 Days to Die",
+    "genre": "Strategy/Simulation",
+    "release_date": "2024-07-25",
+    "price_usd": 44.99,
+    "total_reviews": 370046,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1086940,
+    "name": "Baldur's Gate 3",
+    "genre": "RPG",
+    "release_date": "2023-08-03",
+    "price_usd": 59.99,
+    "total_reviews": 760662,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1517290,
+    "name": "Battlefield 2042",
+    "genre": "Action",
+    "release_date": "2021-11-19",
+    "price_usd": 59.99,
+    "total_reviews": 297774,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 284160,
+    "name": "BeamNG.drive",
+    "genre": "Strategy/Simulation",
+    "release_date": "2015-05-29",
+    "price_usd": 24.99,
+    "total_reviews": 322278,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 2358720,
+    "name": "Black Myth: Wukong",
+    "genre": "RPG",
+    "release_date": "2024-08-19",
+    "price_usd": 59.99,
+    "total_reviews": 1150098,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 960090,
+    "name": "Bloons TD 6",
+    "genre": "Strategy/Simulation",
+    "release_date": "2018-12-17",
+    "price_usd": 13.99,
+    "total_reviews": 353960,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 255710,
+    "name": "Cities: Skylines",
+    "genre": "Strategy/Simulation",
+    "release_date": "2015-03-10",
+    "price_usd": 29.99,
+    "total_reviews": 275770,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 870780,
+    "name": "Control",
+    "genre": "Adventure",
+    "release_date": "2020-08-27",
+    "price_usd": 39.99,
+    "total_reviews": 50448,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 1091500,
+    "name": "Cyberpunk 2077",
+    "genre": "RPG",
+    "release_date": "2020-12-09",
+    "price_usd": 59.99,
+    "total_reviews": 844921,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 221100,
+    "name": "DayZ",
+    "genre": "Adventure",
+    "release_date": "2018-12-13",
+    "price_usd": 49.99,
+    "total_reviews": 430252,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 381210,
+    "name": "Dead by Daylight",
+    "genre": "Action",
+    "release_date": "2016-06-14",
+    "price_usd": 19.99,
+    "total_reviews": 797216,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 435150,
+    "name": "Divinity: Original Sin 2",
+    "genre": "RPG",
+    "release_date": "2017-09-14",
+    "price_usd": 44.99,
+    "total_reviews": 190124,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 322330,
+    "name": "Don't Starve Together",
+    "genre": "RPG",
+    "release_date": "2016-04-21",
+    "price_usd": 14.99,
+    "total_reviews": 499061,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 239140,
+    "name": "Dying Light",
+    "genre": "RPG",
+    "release_date": "2015-01-26",
+    "price_usd": 24.99,
+    "total_reviews": 457632,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1245620,
+    "name": "ELDEN RING",
+    "genre": "RPG",
+    "release_date": "2022-02-24",
+    "price_usd": 59.99,
+    "total_reviews": 1056677,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 227300,
+    "name": "Euro Truck Simulator 2",
+    "genre": "Strategy/Simulation",
+    "release_date": "2012-10-12",
+    "price_usd": 19.99,
+    "total_reviews": 867404,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 377160,
+    "name": "Fallout 4",
+    "genre": "RPG",
+    "release_date": "2015-11-09",
+    "price_usd": 19.99,
+    "total_reviews": 392287,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 4000,
+    "name": "Garry's Mod",
+    "genre": "Strategy/Simulation",
+    "release_date": "2006-11-29",
+    "price_usd": 9.99,
+    "total_reviews": 1159707,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 553850,
+    "name": "HELLDIVERS 2",
+    "genre": "Action",
+    "release_date": "2024-02-08",
+    "price_usd": 39.99,
+    "total_reviews": 1017635,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1145360,
+    "name": "Hades",
+    "genre": "Casual/Lightweight",
+    "release_date": "2020-09-17",
+    "price_usd": 24.99,
+    "total_reviews": 279741,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 394360,
+    "name": "Hearts of Iron IV",
+    "genre": "Strategy/Simulation",
+    "release_date": "2016-06-06",
+    "price_usd": 49.99,
+    "total_reviews": 342150,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 990080,
+    "name": "Hogwarts Legacy",
+    "genre": "RPG",
+    "release_date": "2023-02-10",
+    "price_usd": 59.99,
+    "total_reviews": 321395,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 367520,
+    "name": "Hollow Knight",
+    "genre": "Adventure",
+    "release_date": "2017-02-24",
+    "price_usd": 14.99,
+    "total_reviews": 415946,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 1426210,
+    "name": "It Takes Two",
+    "genre": "Adventure",
+    "release_date": "2021-03-25",
+    "price_usd": 39.99,
+    "total_reviews": 218383,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 550,
+    "name": "Left 4 Dead 2",
+    "genre": "Action",
+    "release_date": "2009-11-16",
+    "price_usd": 9.99,
+    "total_reviews": 963983,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1966720,
+    "name": "Lethal Company",
+    "genre": "Adventure",
+    "release_date": "2023-10-23",
+    "price_usd": 9.99,
+    "total_reviews": 487160,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 582010,
+    "name": "Monster Hunter: World",
+    "genre": "Action",
+    "release_date": "2018-08-08",
+    "price_usd": 29.99,
+    "total_reviews": 493390,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 261550,
+    "name": "Mount & Blade II: Bannerlord",
+    "genre": "Casual/Lightweight",
+    "release_date": "2022-10-25",
+    "price_usd": 49.99,
+    "total_reviews": 264391,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 275850,
+    "name": "No Man's Sky",
+    "genre": "Adventure",
+    "release_date": "2016-08-12",
+    "price_usd": 59.99,
+    "total_reviews": 352858,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1057090,
+    "name": "Ori and the Will of the Wisps",
+    "genre": "Adventure",
+    "release_date": "2020-03-10",
+    "price_usd": 29.99,
+    "total_reviews": 136690,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 218620,
+    "name": "PAYDAY 2",
+    "genre": "Action",
+    "release_date": "2013-08-13",
+    "price_usd": 9.99,
+    "total_reviews": 663082,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1623730,
+    "name": "Palworld",
+    "genre": "RPG",
+    "release_date": "2024-01-18",
+    "price_usd": 29.99,
+    "total_reviews": 380709,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1118200,
+    "name": "People Playground",
+    "genre": "Casual/Lightweight",
+    "release_date": "2019-07-23",
+    "price_usd": 9.99,
+    "total_reviews": 281763,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 739630,
+    "name": "Phasmophobia",
+    "genre": "Action",
+    "release_date": "2020-09-18",
+    "price_usd": 19.99,
+    "total_reviews": 768779,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 620,
+    "name": "Portal 2",
+    "genre": "Adventure",
+    "release_date": "2011-04-18",
+    "price_usd": 9.99,
+    "total_reviews": 433510,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 648800,
+    "name": "Raft",
+    "genre": "Strategy/Simulation",
+    "release_date": "2022-06-20",
+    "price_usd": 19.99,
+    "total_reviews": 346359,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1144200,
+    "name": "Ready or Not",
+    "genre": "Casual/Lightweight",
+    "release_date": "2023-12-13",
+    "price_usd": 49.99,
+    "total_reviews": 236196,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1174180,
+    "name": "Red Dead Redemption 2",
+    "genre": "Action",
+    "release_date": "2019-12-05",
+    "price_usd": 59.99,
+    "total_reviews": 733542,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 294100,
+    "name": "RimWorld",
+    "genre": "Strategy/Simulation",
+    "release_date": "2018-10-17",
+    "price_usd": 34.99,
+    "total_reviews": 210517,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 632360,
+    "name": "Risk of Rain 2",
+    "genre": "Casual/Lightweight",
+    "release_date": "2020-08-11",
+    "price_usd": 24.99,
+    "total_reviews": 313577,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 252490,
+    "name": "Rust",
+    "genre": "Action",
+    "release_date": "2018-02-08",
+    "price_usd": 39.99,
+    "total_reviews": 1227784,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 526870,
+    "name": "Satisfactory",
+    "genre": "Casual/Lightweight",
+    "release_date": "2024-09-10",
+    "price_usd": 39.99,
+    "total_reviews": 232064,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1172620,
+    "name": "Sea of Thieves: 2025 Edition",
+    "genre": "Adventure",
+    "release_date": "2020-06-03",
+    "price_usd": 39.99,
+    "total_reviews": 355238,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 814380,
+    "name": "Sekiro: Shadows Die Twice - GOTY Edition",
+    "genre": "Action",
+    "release_date": "2019-03-21",
+    "price_usd": 59.99,
+    "total_reviews": 322234,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 289070,
+    "name": "Sid Meier’s Civilization VI",
+    "genre": "Strategy/Simulation",
+    "release_date": "2016-10-20",
+    "price_usd": 59.99,
+    "total_reviews": 349920,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1326470,
+    "name": "Sons Of The Forest",
+    "genre": "Casual/Lightweight",
+    "release_date": "2024-02-22",
+    "price_usd": 29.99,
+    "total_reviews": 253546,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 413150,
+    "name": "Stardew Valley",
+    "genre": "Casual/Lightweight",
+    "release_date": "2016-02-26",
+    "price_usd": 14.99,
+    "total_reviews": 886195,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1332010,
+    "name": "Stray",
+    "genre": "Adventure",
+    "release_date": "2022-07-19",
+    "price_usd": 29.99,
+    "total_reviews": 156607,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 264710,
+    "name": "Subnautica",
+    "genre": "Adventure",
+    "release_date": "2018-01-23",
+    "price_usd": 29.99,
+    "total_reviews": 313707,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 105600,
+    "name": "Terraria",
+    "genre": "Action",
+    "release_date": "2011-05-16",
+    "price_usd": 9.99,
+    "total_reviews": 1409473,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 242760,
+    "name": "The Forest",
+    "genre": "Strategy/Simulation",
+    "release_date": "2018-04-30",
+    "price_usd": 19.99,
+    "total_reviews": 627791,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 391540,
+    "name": "Undertale",
+    "genre": "Casual/Lightweight",
+    "release_date": "2015-09-15",
+    "price_usd": 9.99,
+    "total_reviews": 272932,
+    "is_multiplayer": false
+  },
+  {
+    "appid": 892970,
+    "name": "Valheim",
+    "genre": "RPG",
+    "release_date": "2021-02-02",
+    "price_usd": 19.99,
+    "total_reviews": 499828,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1794680,
+    "name": "Vampire Survivors",
+    "genre": "Casual/Lightweight",
+    "release_date": "2022-10-20",
+    "price_usd": 4.99,
+    "total_reviews": 250334,
+    "is_multiplayer": true
+  },
+  {
+    "appid": 1468810,
+    "name": "鬼谷八荒 Tale of Immortal",
+    "genre": "Casual/Lightweight",
+    "release_date": "2023-05-26",
+    "price_usd": 19.99,
+    "total_reviews": 227104,
+    "is_multiplayer": false
+  }
+]
