@@ -1,7 +1,51 @@
+"use client"
+
+import { useEffect, useMemo, useState } from "react"
+import type {
+  DashboardEvent,
+  SimulatorInput,
+  SimulatorResult,
+  SimulatorRule,
+} from "@/types"
 import { PageHeader } from "@/components/layout/PageHeader"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { SimulatorForm } from "@/components/simulator/SimulatorForm"
+import { StrategyResult } from "@/components/simulator/StrategyResult"
+import { fetchDashboardEvents, fetchSimulatorRules } from "@/lib/data"
+import { orderSlots, runSim } from "@/lib/simulator"
 
 export default function SimulatorPage() {
+  const [rules, setRules] = useState<SimulatorRule[]>([])
+  const [events, setEvents] = useState<DashboardEvent[]>([])
+  const [input, setInput] = useState<SimulatorInput | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    Promise.all([fetchSimulatorRules(), fetchDashboardEvents()])
+      .then(([r, e]) => {
+        setRules(r)
+        setEvents(e)
+        setLoading(false)
+      })
+      .catch(() => {
+        setError(true)
+        setLoading(false)
+      })
+  }, [])
+
+  const sampleCount = useMemo(() => {
+    if (!input) return 0
+    const ev = events.find(
+      (e) => e.genre === input.genre && e.playtime_filter === "all",
+    )
+    return ev?.valid_event_count_for_genre ?? 0
+  }, [input, events])
+
+  const result: SimulatorResult | null = useMemo(() => {
+    if (!input || rules.length === 0) return null
+    return runSim(input, rules)
+  }, [input, rules, sampleCount])
+
   return (
     <div className="container mx-auto px-4 py-8">
       <PageHeader
@@ -9,46 +53,38 @@ export default function SimulatorPage() {
         description="장르·할인율·시즌·빈도·목표 조건에 따른 전략 리스크를 진단합니다."
       />
 
-      <Alert className="mb-6">
-        <AlertTitle>팀원 담당 기능</AlertTitle>
-        <AlertDescription>
-          Strategy Simulator는 팀원 담당 기능이며, SimulatorInput / SimulatorResult 타입에 맞춰 통합 예정입니다.
-        </AlertDescription>
-      </Alert>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        <div className="rounded-lg border p-6">
-          <h3 className="font-semibold mb-4">입력 폼 자리</h3>
-          <div className="space-y-3">
-            {[
-              "장르 (Action / RPG / Adventure / Casual/Lightweight / Strategy/Simulation)",
-              "할인율 (10% ~ 90%)",
-              "할인 시점 (시즌 세일 / 비시즌 할인)",
-              "연간 할인 빈도 (1회 / 2회 / 3회 이상)",
-              "전략 목표 (단기 유입 / 장기 유지 / 만족도 관리)",
-            ].map((label) => (
-              <div key={label} className="flex rounded border p-3 text-sm text-muted-foreground">
-                {label}
-              </div>
-            ))}
-          </div>
+      {loading && (
+        <div className="mb-4 flex h-24 items-center justify-center text-sm text-muted-foreground">
+          데이터 로딩 중...
         </div>
+      )}
 
-        <div className="rounded-lg border p-6">
-          <h3 className="font-semibold mb-4">진단 결과 자리</h3>
-          <div className="space-y-3 text-sm text-muted-foreground">
-            <p>• 전략 유형 (단기 유입형 / 유지율 주의형 / 만족도 리스크형 / 반복 할인 피로형)</p>
-            <p>• 단기 반응 가능성</p>
-            <p>• 유지율 리스크</p>
-            <p>• 만족도 리스크</p>
-            <p>• 반복 할인 피로도</p>
-            <p>• 근거 통계 및 표본 크기 경고</p>
-            <p className="pt-2 text-xs border-t">
-              ※ 이 결과는 예측 모델이 아니라 과거 유사 조건 기준의 전략 참고용 진단입니다.
-            </p>
-          </div>
+      {error && (
+        <div className="mb-4 rounded-lg border border-destructive/50 p-4 text-sm text-destructive">
+          룰 또는 이벤트 데이터를 불러올 수 없습니다.
+          <br />
+          <code className="font-mono">python scripts/build_app_data.py</code> 실행 후 다시 시도하세요.
         </div>
-      </div>
+      )}
+
+      {!loading && !error && (
+        <div className="grid gap-6 md:grid-cols-2">
+          <SimulatorForm onSubmit={setInput} />
+
+          {result && input ? (
+            <StrategyResult result={result} order={orderSlots(input.strategy_goal)} genre={input.genre} sampleCount={sampleCount} />
+          ) : (
+            <div className="rounded-lg border p-6 text-sm text-muted-foreground">
+              왼쪽 폼에서 조건을 선택하고 <b>진단 실행</b>을 누르세요.
+            </div>
+          )}
+        </div>
+      )}
+
+      <p className="mt-8 text-xs text-muted-foreground border-t pt-4">
+        ※ 이 결과는 예측 모델이 아니라 과거 유사 조건 기준의 전략 참고용 진단입니다.
+        통계적 신뢰도를 함께 확인하세요.
+      </p>
     </div>
   )
 }
