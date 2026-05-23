@@ -15,6 +15,7 @@ import {
   type DashboardFilters,
 } from "@/lib/filter"
 import { ChartCard } from "@/components/common/ChartCard"
+import { FadeUp, Stagger, StaggerItem } from "@/components/ui/motion"
 import { DiscountRateChart } from "@/components/dashboard/DiscountRateChart"
 import { GenreChart } from "@/components/dashboard/GenreChart"
 import { SeasonalityChart } from "@/components/dashboard/SeasonalityChart"
@@ -171,63 +172,47 @@ export default function DashboardPage() {
           {/* ── 통계 카드 ── */}
           <section className="border-b bg-white">
             <div className="container mx-auto px-4 py-8">
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+              <Stagger className="grid grid-cols-2 gap-6 md:grid-cols-4">
                 {[
                   { label: "분석 게임 수", value: "55개" },
                   { label: "수집 할인 이벤트", value: "808건" },
                   { label: "유효 분석 이벤트", value: "263건" },
                   { label: "필터 적용 이벤트", value: `${filtered.length}건` },
                 ].map(({ label, value }) => (
-                  <div key={label}>
+                  <StaggerItem key={label}>
                     <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">{label}</p>
                     <p className="mt-1.5 text-2xl font-bold text-slate-900">{value}</p>
-                  </div>
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
             </div>
           </section>
 
           {/* ── 차트 그리드 ── */}
           <section className="border-b bg-slate-50">
             <div className="container mx-auto px-4 py-8">
-              <div className="grid gap-5 md:grid-cols-2">
-                <ChartCard
-                  title="할인율 구간별 반응률"
-                  description={`리뷰 유형: ${reviewTypeLabel}`}
-                >
-                  {isEmpty || isReviewTypeEmpty ? (
-                    <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} />
-                  ) : (
-                    <DiscountRateChart events={reviewFiltered} reviewType={filters.reviewType} />
-                  )}
-                </ChartCard>
-
-                <ChartCard
-                  title="장르별 반응률"
-                  description={`리뷰 유형: ${reviewTypeLabel}`}
-                >
-                  {isEmpty || isReviewTypeEmpty ? (
-                    <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} />
-                  ) : (
-                    <GenreChart events={reviewFiltered} reviewType={filters.reviewType} />
-                  )}
-                </ChartCard>
-
-                <ChartCard
-                  title="시즌/비시즌 반응률·유지율"
-                  description={`리뷰 유형: ${reviewTypeLabel}`}
-                >
-                  {isEmpty || isReviewTypeEmpty ? (
-                    <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} />
-                  ) : (
-                    <SeasonalityChart events={reviewFiltered} reviewType={filters.reviewType} />
-                  )}
-                </ChartCard>
-
-                <ChartCard title="평판 변화 분포" description="긍정률 변화 기준 이벤트 분류">
-                  <SentimentDistribution events={filtered} />
-                </ChartCard>
-              </div>
+              <Stagger className="grid gap-5 md:grid-cols-2">
+                <StaggerItem>
+                  <ChartCard title="할인율 구간별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`}>
+                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <DiscountRateChart events={reviewFiltered} reviewType={filters.reviewType} />}
+                  </ChartCard>
+                </StaggerItem>
+                <StaggerItem>
+                  <ChartCard title="장르별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`}>
+                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <GenreChart events={reviewFiltered} reviewType={filters.reviewType} />}
+                  </ChartCard>
+                </StaggerItem>
+                <StaggerItem>
+                  <ChartCard title="시즌/비시즌 반응률·유지율" description={`리뷰 유형: ${reviewTypeLabel}`}>
+                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <SeasonalityChart events={reviewFiltered} reviewType={filters.reviewType} />}
+                  </ChartCard>
+                </StaggerItem>
+                <StaggerItem>
+                  <ChartCard title="평판 변화 분포" description="긍정률 변화 기준 이벤트 분류">
+                    <SentimentDistribution events={filtered} />
+                  </ChartCard>
+                </StaggerItem>
+              </Stagger>
             </div>
           </section>
 

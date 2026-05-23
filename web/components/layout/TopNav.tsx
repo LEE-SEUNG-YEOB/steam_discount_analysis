@@ -15,7 +15,7 @@ export function TopNav() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm shadow-sm/5">
       <div className="container mx-auto px-4">
         <div className="flex h-14 items-stretch gap-8">
           <div className="flex items-center shrink-0">

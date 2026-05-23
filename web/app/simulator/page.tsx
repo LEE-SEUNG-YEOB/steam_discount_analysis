@@ -7,6 +7,7 @@ import type {
   SimulatorResult,
   SimulatorRule,
 } from "@/types"
+import { FadeUp } from "@/components/ui/motion"
 import { SimulatorForm } from "@/components/simulator/SimulatorForm"
 import { StrategyResult } from "@/components/simulator/StrategyResult"
 import { fetchDashboardEvents, fetchSimulatorRules } from "@/lib/data"
@@ -81,7 +82,7 @@ export default function SimulatorPage() {
       {!loading && !error && (
         <section className="bg-slate-50">
           <div className="container mx-auto px-4 py-8">
-            <div className="grid gap-6 md:grid-cols-2">
+            <FadeUp className="grid gap-6 md:grid-cols-2">
               <SimulatorForm onSubmit={setInput} />
 
               {result && input ? (
@@ -99,7 +100,7 @@ export default function SimulatorPage() {
                   </p>
                 </div>
               )}
-            </div>
+            </FadeUp>
           </div>
         </section>
       )}

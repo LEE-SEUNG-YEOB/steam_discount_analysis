@@ -15,7 +15,8 @@
       "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('data/event_sentiment.csv'\\); print\\(f'rows: {len\\(df\\)}'\\); print\\(df['sentiment_group'].value_counts\\(\\)\\)\")",
       "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('c:/Users/alvin/OneDrive/바탕 화면/WorkSpace/steam_discount_analysis/data/analysis_df.csv', nrows=2\\); print\\(list\\(df.columns\\)\\)\")",
       "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('c:/Users/alvin/OneDrive/바탕 화면/WorkSpace/steam_discount_analysis/data/genre_mapping_v2.csv', nrows=3\\); print\\(list\\(df.columns\\)\\); print\\(df.head\\(3\\)\\)\")",
-      "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('c:/Users/alvin/OneDrive/바탕 화면/WorkSpace/steam_discount_analysis/data/game_metadata.csv', nrows=3\\); print\\(list\\(df.columns\\)\\); print\\(df.head\\(3\\)\\)\")"
+      "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('c:/Users/alvin/OneDrive/바탕 화면/WorkSpace/steam_discount_analysis/data/game_metadata.csv', nrows=3\\); print\\(list\\(df.columns\\)\\); print\\(df.head\\(3\\)\\)\")",
+      "Bash(node -e ' *)"
     ]
   }
 }

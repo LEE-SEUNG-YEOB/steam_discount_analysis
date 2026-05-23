@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator"
+import { FadeUp } from "@/components/ui/motion"
 
 export default function MethodologyPage() {
   return (
@@ -15,6 +16,7 @@ export default function MethodologyPage() {
 
       {/* ── 본문 ── */}
       <section className="bg-white">
+        <FadeUp>
         <div className="container mx-auto px-4 py-10 max-w-3xl space-y-8">
           <div>
             <h2 className="text-base font-semibold text-slate-900 mb-3">지표 정의</h2>
@@ -96,6 +98,7 @@ export default function MethodologyPage() {
             </p>
           </div>
         </div>
+        </FadeUp>
       </section>
     </div>
   )
