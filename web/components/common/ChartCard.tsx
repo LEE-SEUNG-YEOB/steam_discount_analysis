@@ -7,10 +7,12 @@ interface ChartCardProps {
 
 export function ChartCard({ title, description, children, className = "" }: ChartCardProps) {
   return (
-    <div className={`rounded-lg border bg-card p-4 ${className}`}>
-      <div className="mb-3">
-        <h3 className="font-semibold text-sm">{title}</h3>
-        {description && <p className="text-xs text-muted-foreground mt-0.5">{description}</p>}
+    <div className={`rounded-xl border border-slate-200 bg-white p-5 shadow-sm ${className}`}>
+      <div className="mb-4">
+        <h3 className="font-semibold text-sm text-slate-900">{title}</h3>
+        {description && (
+          <p className="text-xs text-slate-400 mt-0.5">{description}</p>
+        )}
       </div>
       {children}
     </div>

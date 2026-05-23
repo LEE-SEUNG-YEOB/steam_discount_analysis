@@ -7,7 +7,6 @@ import type {
   SimulatorResult,
   SimulatorRule,
 } from "@/types"
-import { PageHeader } from "@/components/layout/PageHeader"
 import { SimulatorForm } from "@/components/simulator/SimulatorForm"
 import { StrategyResult } from "@/components/simulator/StrategyResult"
 import { fetchDashboardEvents, fetchSimulatorRules } from "@/lib/data"
@@ -47,44 +46,72 @@ export default function SimulatorPage() {
   }, [input, rules, sampleCount])
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <PageHeader
-        title="할인 전략 시뮬레이터"
-        description="장르·할인율·시즌·빈도·목표 조건에 따른 전략 리스크를 진단합니다."
-      />
+    <div>
+      {/* ── 페이지 헤더 ── */}
+      <section className="border-b bg-white">
+        <div className="container mx-auto px-4 py-10">
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">
+            할인 전략 시뮬레이터
+          </h1>
+          <p className="text-slate-500">
+            장르·할인율·시즌·빈도·목표 조건에 따른 전략 리스크를 진단합니다.
+          </p>
+        </div>
+      </section>
 
       {loading && (
-        <div className="mb-4 flex h-24 items-center justify-center text-sm text-muted-foreground">
-          데이터 로딩 중...
-        </div>
+        <section className="bg-white">
+          <div className="container mx-auto px-4 py-16 text-center text-sm text-slate-400">
+            데이터 로딩 중...
+          </div>
+        </section>
       )}
 
       {error && (
-        <div className="mb-4 rounded-lg border border-destructive/50 p-4 text-sm text-destructive">
-          룰 또는 이벤트 데이터를 불러올 수 없습니다.
-          <br />
-          <code className="font-mono">python scripts/build_app_data.py</code> 실행 후 다시 시도하세요.
-        </div>
+        <section className="bg-white">
+          <div className="container mx-auto px-4 py-8">
+            <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+              룰 또는 이벤트 데이터를 불러올 수 없습니다.{" "}
+              <code className="font-mono">python scripts/build_app_data.py</code> 실행 후 다시 시도하세요.
+            </div>
+          </div>
+        </section>
       )}
 
       {!loading && !error && (
-        <div className="grid gap-6 md:grid-cols-2">
-          <SimulatorForm onSubmit={setInput} />
+        <section className="bg-slate-50">
+          <div className="container mx-auto px-4 py-8">
+            <div className="grid gap-6 md:grid-cols-2">
+              <SimulatorForm onSubmit={setInput} />
 
-          {result && input ? (
-            <StrategyResult result={result} order={orderSlots(input.strategy_goal)} genre={input.genre} sampleCount={sampleCount} />
-          ) : (
-            <div className="rounded-lg border p-6 text-sm text-muted-foreground">
-              왼쪽 폼에서 조건을 선택하고 <b>진단 실행</b>을 누르세요.
+              {result && input ? (
+                <StrategyResult
+                  result={result}
+                  order={orderSlots(input.strategy_goal)}
+                  genre={input.genre}
+                  sampleCount={sampleCount}
+                />
+              ) : (
+                <div className="rounded-xl border border-slate-200 bg-white p-8 flex items-center justify-center min-h-[200px] shadow-sm">
+                  <p className="text-sm text-slate-400 text-center leading-relaxed">
+                    왼쪽 폼에서 조건을 선택하고<br />
+                    <span className="font-semibold text-slate-600">진단 실행</span>을 누르세요.
+                  </p>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        </section>
       )}
 
-      <p className="mt-8 text-xs text-muted-foreground border-t pt-4">
-        ※ 이 결과는 예측 모델이 아니라 과거 유사 조건 기준의 전략 참고용 진단입니다.
-        통계적 신뢰도를 함께 확인하세요.
-      </p>
+      <section className="border-t bg-white">
+        <div className="container mx-auto px-4 py-4">
+          <p className="text-xs text-slate-400">
+            ※ 이 결과는 예측 모델이 아니라 과거 유사 조건 기준의 전략 참고용 진단입니다.
+            통계적 신뢰도를 함께 확인하세요.
+          </p>
+        </div>
+      </section>
     </div>
   )
 }

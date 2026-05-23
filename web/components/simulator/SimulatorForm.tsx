@@ -42,8 +42,8 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
   }
 
   return (
-    <form onSubmit={submit} className="rounded-lg border p-6 space-y-5">
-      <h3 className="font-semibold">입력 조건</h3>
+    <form onSubmit={submit} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm space-y-5">
+      <h3 className="font-semibold text-slate-900">입력 조건</h3>
 
       <Field label="장르">
         <Select value={genre} onValueChange={(v) => setGenre(v as Genre)}>
@@ -64,9 +64,9 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
           step={5}
           value={rate}
           onChange={(e) => setRate(Number(e.target.value))}
-          className="w-full accent-foreground"
+          className="w-full accent-blue-600"
         />
-        <div className="flex justify-between text-xs text-muted-foreground mt-1">
+        <div className="flex justify-between text-xs text-slate-400 mt-1">
           <span>10%</span>
           <span>50%</span>
           <span>90%</span>
@@ -113,7 +113,7 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="space-y-1.5">
-      <label className="text-sm font-medium">{label}</label>
+      <label className="text-sm font-medium text-slate-700">{label}</label>
       {children}
     </div>
   )

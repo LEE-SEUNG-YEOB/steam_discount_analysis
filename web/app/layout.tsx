@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={inter.className}>
         <TopNav />
-        <main className="min-h-screen bg-background">{children}</main>
+        <main className="min-h-screen bg-white">{children}</main>
       </body>
     </html>
   )
