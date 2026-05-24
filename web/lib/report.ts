@@ -3,6 +3,12 @@ import type { GameReport } from "@/types"
 export function generateReportComment(game: GameReport): string {
   const lines: string[] = []
 
+  if (game.valid_event_count === 1) {
+    lines.push(
+      `※ 본 게임은 분석 기간 중 유효 할인 이벤트가 1건뿐입니다. 아래 해석은 단일 이벤트 기준이므로 일반화에 주의해주세요.`
+    )
+  }
+
   // 반응률 + 장르/전체 비교
   const aboveGenre = game.avg_response_rate > game.genre_median_response
   const aboveOverall = game.avg_response_rate > game.overall_median_response
@@ -48,6 +54,12 @@ export function generateReportComment(game: GameReport): string {
   if (game.season_response === undefined || game.nonseason_response === undefined) {
     lines.push(
       `※ 수집된 할인 이벤트가 시즌 세일 또는 비시즌 한 종류만 존재해 시즌/비시즌 비교 데이터를 산출할 수 없습니다.`
+    )
+  }
+
+  if (game.valid_event_count === 2) {
+    lines.push(
+      `※ 본 게임은 유효 할인 이벤트가 2건으로 적은 편이라 결과의 안정성이 제한적일 수 있습니다.`
     )
   }
 
