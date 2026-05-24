@@ -3,40 +3,51 @@ import type { GameReport } from "@/types"
 export function generateReportComment(game: GameReport): string {
   const lines: string[] = []
 
+  // 반응률 + 장르/전체 비교
+  const aboveGenre = game.avg_response_rate > game.genre_median_response
+  const aboveOverall = game.avg_response_rate > game.overall_median_response
   lines.push(
-    `${game.name}는 총 ${game.valid_event_count}건의 유효 할인 이벤트가 있었고, 평균 반응률은 ${game.avg_response_rate.toFixed(3)}입니다.`
+    `${game.name}의 평균 반응률은 ${game.avg_response_rate.toFixed(3)}으로, 장르(${game.genre}) 평균 ${game.genre_median_response.toFixed(3)}보다 ${aboveGenre ? "높고" : "낮고"} 전체 평균 ${game.overall_median_response.toFixed(3)}보다 ${aboveOverall ? "높습니다." : "낮습니다."}`
   )
 
-  if (game.avg_response_rate > game.genre_median_response) {
-    lines.push(
-      `이는 같은 장르(${game.genre}) 중앙값 ${game.genre_median_response.toFixed(3)}보다 높은 편입니다.`
-    )
-  } else {
-    lines.push(
-      `이는 같은 장르(${game.genre}) 중앙값 ${game.genre_median_response.toFixed(3)}보다 낮은 편입니다.`
-    )
-  }
+  // 할인 빈도 + 할인율
+  const freqText = game.discount_frequency >= 3 ? "자주(연 3회 이상)" : game.discount_frequency === 2 ? "연 2회" : "연 1회 내외"
+  lines.push(
+    `할인은 ${freqText} 진행되었으며, 평균 ${game.avg_discount_rate.toFixed(1)}% 수준으로 최대 ${game.max_discount_rate.toFixed(1)}%까지 할인한 이력이 있습니다.`
+  )
 
+  // 시즌 vs 비시즌
   if (game.season_response !== undefined && game.nonseason_response !== undefined) {
-    if (game.season_response > game.nonseason_response) {
+    const diff = Math.abs(game.season_response - game.nonseason_response)
+    if (game.nonseason_response > game.season_response) {
       lines.push(
-        `시즌 세일의 평균 반응률은 ${game.season_response.toFixed(3)}로, 비시즌 할인 ${game.nonseason_response.toFixed(3)}보다 높게 나타났습니다.`
+        `시즌 세일(${game.season_response.toFixed(3)})보다 비시즌 할인(${game.nonseason_response.toFixed(3)})에서 반응률이 ${diff.toFixed(3)} 더 높아, 조용한 시기의 할인이 더 효과적이었습니다.`
       )
-      lines.push(`따라서 이 게임은 시즌 할인에서 단기 반응이 더 크게 나타나는 패턴을 보입니다.`)
-    } else if (game.nonseason_response > game.season_response) {
+    } else if (game.season_response > game.nonseason_response) {
       lines.push(
-        `비시즌 할인의 평균 반응률은 ${game.nonseason_response.toFixed(3)}로, 시즌 세일 ${game.season_response.toFixed(3)}보다 높게 나타났습니다.`
+        `시즌 세일(${game.season_response.toFixed(3)})에서 반응률이 비시즌(${game.nonseason_response.toFixed(3)})보다 ${diff.toFixed(3)} 높아, 시즌 이벤트와 연계한 할인 전략이 효과적이었습니다.`
       )
     }
   }
 
-  lines.push(
-    `평균 할인율은 ${game.avg_discount_rate.toFixed(1)}%이며, 최고 할인율은 ${game.max_discount_rate.toFixed(1)}%입니다.`
-  )
-
-  if (game.avg_retention_rate < 0.1) {
+  // 유지율
+  if (game.avg_retention_rate >= 0.2) {
     lines.push(
-      `다만 평균 유지율은 ${game.avg_retention_rate.toFixed(3)}으로 낮은 편이며, 단기 유입 이후 장기 유지 전략을 함께 고려할 필요가 있습니다.`
+      `유지율은 ${game.avg_retention_rate.toFixed(3)}으로 비교적 높아, 할인을 통해 유입된 유저 중 일부가 장기 플레이로 이어진 것으로 보입니다.`
+    )
+  } else if (game.avg_retention_rate >= 0.1) {
+    lines.push(
+      `유지율은 ${game.avg_retention_rate.toFixed(3)}으로 중간 수준이며, 단기 유입은 있었으나 장기 유지로 이어지는 비율은 제한적이었습니다.`
+    )
+  } else {
+    lines.push(
+      `유지율은 ${game.avg_retention_rate.toFixed(3)}으로 낮은 편으로, 할인이 단기 유입에는 효과적이었으나 장기 유지 전략을 별도로 고려할 필요가 있습니다.`
+    )
+  }
+
+  if (game.season_response === undefined || game.nonseason_response === undefined) {
+    lines.push(
+      `※ 수집된 할인 이벤트가 시즌 세일 또는 비시즌 한 종류만 존재해 시즌/비시즌 비교 데이터를 산출할 수 없습니다.`
     )
   }
 

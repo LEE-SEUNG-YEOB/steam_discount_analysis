@@ -68,10 +68,22 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           HERO — 왼쪽 정렬, 단일 컬럼
       ═══════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-white">
-        <div aria-hidden className="pointer-events-none absolute -top-48 -right-40 h-[500px] w-[500px] rounded-full bg-blue-100 opacity-50 blur-[120px]" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-indigo-100 opacity-40 blur-[80px]" />
+      {/* ── 히어로 + 이벤트 수: 배경 공유 래퍼 ── */}
+      <div className="relative overflow-hidden bg-white">
+        {/* 배경 장식 레이어 */}
+        <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(219,234,254,0.5) 0%, rgba(237,233,254,0.4) 40%, rgba(252,231,243,0.3) 70%, transparent 100%)" }} />
+        <svg aria-hidden className="pointer-events-none absolute bottom-0 right-0 w-[900px] h-[380px] opacity-[0.07]" viewBox="0 0 680 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="0,200 80,170 160,210 240,130 320,155 400,90 460,120 520,70 600,100 680,55" stroke="#3b82f6" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+          <polyline points="0,200 80,170 160,210 240,130 320,155 400,90 460,120 520,70 600,100 680,55 680,260 0,260" fill="#3b82f6" opacity="0.25" />
+          <polyline points="0,230 80,215 160,238 240,190 320,205 400,165 460,182 520,148 600,168 680,130" stroke="#8b5cf6" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+          {[80,160,240,320,400,460,520,600].map((x, i) => {
+            const y = [170,210,130,155,90,120,70,100][i]
+            return <circle key={x} cx={x} cy={y} r="3.5" fill="#3b82f6" />
+          })}
+        </svg>
 
+        {/* 히어로 */}
+        <section className="relative">
         <div className="container relative mx-auto px-4 py-20 md:py-28">
           <div className="max-w-6xl grid md:grid-cols-[1fr_300px] gap-12 items-center">
           <div className="pl-10">
@@ -193,17 +205,10 @@ export default function HomePage() {
 
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* 섹션 구분 — 짧은 가운데 선 */}
-      <div className="flex justify-center bg-white py-1">
-        <div className="w-16 h-px bg-slate-300 rounded-full" />
-      </div>
-
-      {/* ═══════════════════════════════════════════
-          METRICS — 가운데 정렬
-      ═══════════════════════════════════════════ */}
-      <section className="border-b border-slate-200/70 bg-white">
+        {/* ── METRICS ── */}
+        <section className="relative">
         <div className="container mx-auto px-4 py-14">
           <Stagger className="flex justify-center">
             <div className="grid grid-cols-2 sm:grid-cols-4 sm:divide-x sm:divide-slate-200">
@@ -220,7 +225,8 @@ export default function HomePage() {
             </div>
           </Stagger>
         </div>
-      </section>
+        </section>
+      </div>{/* /배경 공유 래퍼 */}
 
       {/* ═══════════════════════════════════════════
           FEATURES

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { SlidersHorizontal, X } from "lucide-react"
+import { SlidersHorizontal, X, BarChart3 } from "lucide-react"
 import type { DashboardEvent } from "@/types"
 import {
   applyFilters,
@@ -34,17 +34,19 @@ function FilterSelect<T extends string>({
   value,
   options,
   onChange,
+  isActive,
 }: {
   label: string
   value: T
   options: readonly { value: T; label: string }[]
   onChange: (v: T) => void
+  isActive?: boolean
 }) {
   return (
     <div className="flex flex-col gap-1">
-      <span className="text-xs font-medium text-slate-500">{label}</span>
+      <span className={`text-[11px] font-semibold tracking-wide ${isActive ? "text-blue-600" : "text-slate-400"}`}>{label}</span>
       <Select value={value} onValueChange={(v) => onChange(v as T)}>
-        <SelectTrigger className="h-8 text-xs w-36">
+        <SelectTrigger className={`h-8 text-xs w-32 transition-colors ${isActive ? "border-blue-400 bg-blue-50 text-blue-900" : "bg-white"}`}>
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
@@ -93,6 +95,13 @@ function EmptyState({ isReviewTypeEmpty }: { isReviewTypeEmpty: boolean }) {
   )
 }
 
+const STAT_CONFIG = [
+  { key: "games",   label: "분석 게임 수",     accent: "bg-blue-500",    sub: "전체 55개" },
+  { key: "collect", label: "수집 할인 이벤트",  accent: "bg-slate-300",   sub: "전체 기준" },
+  { key: "valid",   label: "유효 분석 이벤트",  accent: "bg-violet-400",  sub: "전체 263건" },
+  { key: "applied", label: "필터 적용 이벤트",  accent: "bg-emerald-400", sub: null },
+]
+
 export default function DashboardPage() {
   const [allEvents, setAllEvents] = useState<DashboardEvent[]>([])
   const [loading, setLoading] = useState(true)
@@ -103,18 +112,9 @@ export default function DashboardPage() {
 
   useEffect(() => {
     fetch("/data/dashboard_events.json")
-      .then((r) => {
-        if (!r.ok) throw new Error("fetch 실패")
-        return r.json()
-      })
-      .then((data: DashboardEvent[]) => {
-        setAllEvents(data)
-        setLoading(false)
-      })
-      .catch(() => {
-        setLoadError(true)
-        setLoading(false)
-      })
+      .then((r) => { if (!r.ok) throw new Error(); return r.json() })
+      .then((data: DashboardEvent[]) => { setAllEvents(data); setLoading(false) })
+      .catch(() => { setLoadError(true); setLoading(false) })
   }, [])
 
   const setFilter = <K extends keyof DashboardFilters>(key: K, value: DashboardFilters[K]) =>
@@ -122,6 +122,8 @@ export default function DashboardPage() {
 
   const filtered = applyFilters(allEvents, filters)
   const reviewFiltered = filterByReviewType(filtered, filters.reviewType)
+  const filteredBase = filtered
+  const filteredGameCount = new Set(filteredBase.map((e) => e.appid)).size
 
   const isEmpty = filtered.length === 0
   const isReviewTypeEmpty = !isEmpty && reviewFiltered.length === 0
@@ -132,88 +134,109 @@ export default function DashboardPage() {
 
   const reviewTypeLabel = REVIEW_TYPE_OPTIONS.find((o) => o.value === filters.reviewType)?.label
 
+  const statValues: Record<string, string> = {
+    games:   `${filteredGameCount}개`,
+    collect: "808건",
+    valid:   `${filteredBase.length}건`,
+    applied: `${filtered.length}건`,
+  }
+
   return (
     <div>
       {/* ── 페이지 헤더 ── */}
       <section className="border-b bg-white">
         <div className="container mx-auto px-4 py-10">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">분석 대시보드</h1>
-          <p className="text-slate-500">
-            할인율·장르·시즌성·긍정률 변화를 기준으로 분석 결과를 탐색합니다.
-          </p>
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-2">
+                Analysis Dashboard
+              </p>
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">분석 대시보드</h1>
+              <p className="text-slate-500 text-sm">
+                할인율·장르·시즌성·긍정률 변화를 기준으로 분석 결과를 탐색합니다.
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs text-slate-500">
+              <BarChart3 className="h-3.5 w-3.5 text-blue-500" />
+              5개 필터 · 5개 차트
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── 필터 바 ── */}
-      <section className="border-b bg-slate-50 sticky top-14 z-40">
+      <section className="border-b bg-slate-50 sticky top-14 z-40 shadow-sm">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center gap-3 flex-wrap">
-            <div className="flex items-center gap-1.5 text-xs font-medium text-slate-500 shrink-0">
-              <SlidersHorizontal className="h-3.5 w-3.5" />
-              필터
+          <div className="flex items-start gap-4 flex-wrap">
+            <div className="flex flex-col gap-2 pl-4 pr-4 border-r border-slate-200 shrink-0">
+              <div className="flex items-center gap-1.5">
+                <SlidersHorizontal className="h-3.5 w-3.5 text-blue-500" />
+                <span className="text-xs font-bold text-slate-600 tracking-wide">필터</span>
+              </div>
+              {activeFilterCount > 0 && (
+                <button
+                  onClick={() => setFilters(DEFAULT_FILTERS)}
+                  className="flex items-center gap-1 rounded-full bg-blue-600 px-2.5 py-1 text-[11px] font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm"
+                >
+                  <X className="h-2.5 w-2.5" />
+                  초기화 {activeFilterCount > 1 ? `(${activeFilterCount})` : ""}
+                </button>
+              )}
             </div>
-            <FilterSelect label="장르" value={filters.genre} options={GENRE_OPTIONS} onChange={(v) => setFilter("genre", v)} />
-            <FilterSelect label="플레이타임" value={filters.playtime} options={PLAYTIME_OPTIONS} onChange={(v) => setFilter("playtime", v)} />
-            <FilterSelect label="시즌 여부" value={filters.season} options={SEASON_OPTIONS} onChange={(v) => setFilter("season", v)} />
-            <FilterSelect label="리뷰 유형" value={filters.reviewType} options={REVIEW_TYPE_OPTIONS} onChange={(v) => setFilter("reviewType", v)} />
-            <FilterSelect label="평판 변화" value={filters.sentiment} options={SENTIMENT_OPTIONS} onChange={(v) => setFilter("sentiment", v)} />
-            {activeFilterCount > 0 && (
-              <button
-                onClick={() => setFilters(DEFAULT_FILTERS)}
-                className="ml-auto flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700 font-medium"
-              >
-                <X className="h-3 w-3" />
-                초기화 ({activeFilterCount})
-              </button>
-            )}
+            <FilterSelect label="장르" value={filters.genre} options={GENRE_OPTIONS} onChange={(v) => setFilter("genre", v)} isActive={filters.genre !== DEFAULT_FILTERS.genre} />
+            <FilterSelect label="플레이타임" value={filters.playtime} options={PLAYTIME_OPTIONS} onChange={(v) => setFilter("playtime", v)} isActive={filters.playtime !== DEFAULT_FILTERS.playtime} />
+            <FilterSelect label="시즌 여부" value={filters.season} options={SEASON_OPTIONS} onChange={(v) => setFilter("season", v)} isActive={filters.season !== DEFAULT_FILTERS.season} />
+            <FilterSelect label="리뷰 유형" value={filters.reviewType} options={REVIEW_TYPE_OPTIONS} onChange={(v) => setFilter("reviewType", v)} isActive={filters.reviewType !== DEFAULT_FILTERS.reviewType} />
+            <FilterSelect label="평판 변화" value={filters.sentiment} options={SENTIMENT_OPTIONS} onChange={(v) => setFilter("sentiment", v)} isActive={filters.sentiment !== DEFAULT_FILTERS.sentiment} />
           </div>
         </div>
       </section>
 
       {/* ── 로딩 / 에러 ── */}
       {loading && (
-        <section className="bg-white">
-          <div className="container mx-auto px-4 py-16 text-center text-sm text-slate-400">
-            데이터 로딩 중...
-          </div>
-        </section>
+        <div className="container mx-auto px-4 py-20 text-center text-sm text-slate-400">
+          데이터 로딩 중...
+        </div>
       )}
-
       {loadError && (
-        <section className="bg-white">
-          <div className="container mx-auto px-4 py-8">
-            <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-              데이터 파일을 찾을 수 없습니다.{" "}
-              <code className="font-mono">python scripts/build_app_data.py</code>를 실행하세요.
-            </div>
+        <div className="container mx-auto px-4 py-8">
+          <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            데이터 파일을 찾을 수 없습니다.{" "}
+            <code className="font-mono">python scripts/build_app_data.py</code>를 실행하세요.
           </div>
-        </section>
+        </div>
       )}
 
       {!loading && !loadError && (
         <>
-          {/* ── 통계 카드 ── */}
+          {/* ── 통계 스트립 ── */}
           <section className="border-b bg-white">
-            <div className="container mx-auto px-4 py-8">
-              <Stagger className="grid grid-cols-2 gap-6 md:grid-cols-4">
-                {[
-                  { label: "분석 게임 수", value: "55개" },
-                  { label: "수집 할인 이벤트", value: "808건" },
-                  { label: "유효 분석 이벤트", value: "263건" },
-                  { label: "필터 적용 이벤트", value: `${filtered.length}건` },
-                ].map(({ label, value }) => (
-                  <StaggerItem key={label}>
-                    <p className="text-xs font-medium text-slate-400 uppercase tracking-wide">{label}</p>
-                    <p className="mt-1.5 text-2xl font-bold text-slate-900">{value}</p>
-                  </StaggerItem>
-                ))}
-              </Stagger>
+            <div className="container mx-auto px-4">
+              <FadeUp>
+                <div className="flex items-center">
+                  {STAT_CONFIG.map(({ key, label, accent, sub }, i) => (
+                    <>
+                      {i > 0 && <div key={`sep-${i}`} className="w-px h-10 bg-slate-200 shrink-0" />}
+                      <div key={key} className="flex-1 px-6 py-6 text-center">
+                        <div className={`w-5 h-0.5 rounded-full ${accent} mx-auto mb-3`} />
+                        <p className="text-3xl font-bold text-slate-900 tabular-nums">{statValues[key]}</p>
+                        <p className="text-xs text-slate-500 mt-1.5">{label}</p>
+                        {sub && <p className="text-xs text-slate-300 mt-0.5">{sub}</p>}
+                      </div>
+                    </>
+                  ))}
+                </div>
+              </FadeUp>
             </div>
           </section>
 
           {/* ── 차트 그리드 ── */}
-          <section className="border-b bg-slate-50">
-            <div className="container mx-auto px-4 py-8">
+          <section className="bg-[#f2f4fb]">
+            <div className="container mx-auto px-4 py-10">
+              <FadeUp>
+                <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-1">Charts</p>
+                <h2 className="text-lg font-bold text-slate-900 mb-6">인터랙티브 차트</h2>
+              </FadeUp>
               <Stagger className="grid gap-5 md:grid-cols-2">
                 <StaggerItem>
                   <ChartCard title="할인율 구간별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`} headerRight={<ModeToggle mode={discountMode} onChange={setDiscountMode} />}>
@@ -240,11 +263,7 @@ export default function DashboardPage() {
                     title="장르별 평판 변화 분포"
                     description="장르별 긍정률 상승/유지/하락 이벤트 비율"
                   >
-                    {isEmpty ? (
-                      <EmptyState isReviewTypeEmpty={false} />
-                    ) : (
-                      <SentimentByGenreChart events={filtered} />
-                    )}
+                    {isEmpty ? <EmptyState isReviewTypeEmpty={false} /> : <SentimentByGenreChart events={filtered} />}
                   </ChartCard>
                   <p className="text-xs text-slate-400 mt-2 px-1 leading-relaxed">
                     ※ 전체 분포뿐 아니라 장르별로 긍정률 하락 비중을 확인할 수 있습니다.
@@ -255,65 +274,47 @@ export default function DashboardPage() {
             </div>
           </section>
 
-          {/* ── Placebo Test ── */}
-          <section className="border-b bg-slate-50">
-            <div className="container mx-auto px-4 pb-8">
-              <PlaceboValidationCard />
-            </div>
-          </section>
-
-          {/* ── 통계 요약표 ── */}
-          <section className="bg-white">
+          {/* ── Placebo + 통계 요약 ── */}
+          <section className="bg-white border-t">
             <div className="container mx-auto px-4 py-10">
-              <h2 className="text-base font-semibold text-slate-900 mb-5">통계 결과 요약</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200">
-                      <th className="text-left py-2 pr-6 text-xs font-semibold text-slate-400 uppercase tracking-wide">구분</th>
-                      <th className="text-left py-2 pr-6 text-xs font-semibold text-slate-400 uppercase tracking-wide">결과</th>
-                      <th className="text-left py-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">해석</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      {
-                        label: "할인율 효과",
-                        badge: "p=0.004",
-                        badgeStyle: "bg-blue-50 text-blue-700",
-                        note: "상대적으로 강한 신호",
-                      },
-                      {
-                        label: "장르 차이",
-                        badge: "p=0.52",
-                        badgeStyle: "bg-slate-100 text-slate-500",
-                        note: "탐색적 패턴",
-                      },
-                      {
-                        label: "시즌성",
-                        badge: "약함",
-                        badgeStyle: "bg-slate-100 text-slate-500",
-                        note: "탐색적 패턴",
-                      },
-                      {
-                        label: "Placebo Test",
-                        badge: "실제 > 비할인",
-                        badgeStyle: "bg-emerald-50 text-emerald-700",
-                        note: "지표 검증",
-                      },
-                    ].map(({ label, badge, badgeStyle, note }) => (
-                      <tr key={label} className="border-b border-slate-100 last:border-0">
-                        <td className="py-3 pr-6 font-medium text-slate-900">{label}</td>
-                        <td className="py-3 pr-6">
-                          <span className={`inline-block rounded px-2 py-0.5 text-xs font-mono font-medium ${badgeStyle}`}>
-                            {badge}
-                          </span>
-                        </td>
-                        <td className="py-3 text-slate-500">{note}</td>
+              <FadeUp>
+                <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-1">Summary</p>
+                <h2 className="text-lg font-bold text-slate-900 mb-6">통계 결과 요약</h2>
+              </FadeUp>
+              <div className="grid md:grid-cols-[1fr_320px] gap-6">
+                {/* 요약표 */}
+                <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-slate-100 bg-slate-50">
+                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">구분</th>
+                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">결과</th>
+                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">해석</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {[
+                        { label: "할인율 효과",  badge: "p=0.004",      badgeStyle: "bg-blue-50 text-blue-700",     note: "상대적으로 강한 신호" },
+                        { label: "장르 차이",    badge: "p=0.52",       badgeStyle: "bg-slate-100 text-slate-500",  note: "탐색적 패턴" },
+                        { label: "시즌성",       badge: "약함",          badgeStyle: "bg-slate-100 text-slate-500",  note: "탐색적 패턴" },
+                        { label: "Placebo Test", badge: "실제 > 비할인", badgeStyle: "bg-emerald-50 text-emerald-700", note: "지표 검증" },
+                      ].map(({ label, badge, badgeStyle, note }) => (
+                        <tr key={label} className="border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
+                          <td className="px-5 py-3.5 font-medium text-slate-900">{label}</td>
+                          <td className="px-5 py-3.5">
+                            <span className={`inline-block rounded-md px-2 py-0.5 text-xs font-mono font-medium ${badgeStyle}`}>
+                              {badge}
+                            </span>
+                          </td>
+                          <td className="px-5 py-3.5 text-slate-500 text-xs">{note}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Placebo */}
+                <PlaceboValidationCard />
               </div>
             </div>
           </section>
@@ -335,35 +336,26 @@ function SentimentDistribution({ events }: { events: DashboardEvent[] }) {
     else if (sg === "down" || sg === "positive_rate_down") counts.down++
   }
   const total = counts.up + counts.neutral + counts.down
-  if (total === 0) {
-    return (
-      <div className="flex h-32 items-center justify-center text-sm text-slate-400">
-        데이터 없음
-      </div>
-    )
-  }
+  if (total === 0) return <div className="flex h-32 items-center justify-center text-sm text-slate-400">데이터 없음</div>
 
   const bars = [
-    { label: "긍정률 상승", count: counts.up, color: "bg-emerald-500" },
-    { label: "긍정률 유지", count: counts.neutral, color: "bg-slate-300" },
-    { label: "긍정률 하락", count: counts.down, color: "bg-rose-400" },
+    { label: "긍정률 상승", count: counts.up,      color: "bg-emerald-400" },
+    { label: "긍정률 유지", count: counts.neutral,  color: "bg-slate-300" },
+    { label: "긍정률 하락", count: counts.down,     color: "bg-rose-400" },
   ]
 
   return (
     <div className="space-y-3 pt-2">
       {bars.map(({ label, count, color }) => (
         <div key={label}>
-          <div className="flex justify-between text-xs text-slate-500 mb-1">
+          <div className="flex justify-between text-xs text-slate-500 mb-1.5">
             <span>{label}</span>
-            <span className="font-medium">
-              {count}건 ({total > 0 ? Math.round((count / total) * 100) : 0}%)
+            <span className="font-semibold text-slate-700">
+              {count}건 <span className="text-slate-400 font-normal">({Math.round((count / total) * 100)}%)</span>
             </span>
           </div>
           <div className="h-2 w-full rounded-full bg-slate-100 overflow-hidden">
-            <div
-              className={`h-full rounded-full ${color} transition-all`}
-              style={{ width: `${total > 0 ? (count / total) * 100 : 0}%` }}
-            />
+            <div className={`h-full rounded-full ${color}`} style={{ width: `${(count / total) * 100}%` }} />
           </div>
         </div>
       ))}
