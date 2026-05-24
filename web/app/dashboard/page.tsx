@@ -16,10 +16,11 @@ import {
 } from "@/lib/filter"
 import { ChartCard } from "@/components/common/ChartCard"
 import { FadeUp, Stagger, StaggerItem } from "@/components/ui/motion"
-import { DiscountRateChart } from "@/components/dashboard/DiscountRateChart"
+import { DiscountRateChart, type ChartMode } from "@/components/dashboard/DiscountRateChart"
 import { GenreChart } from "@/components/dashboard/GenreChart"
 import { SeasonalityChart } from "@/components/dashboard/SeasonalityChart"
 import { PlaceboValidationCard } from "@/components/dashboard/PlaceboValidationCard"
+import { SentimentByGenreChart } from "@/components/dashboard/SentimentByGenreChart"
 import {
   Select,
   SelectContent,
@@ -58,6 +59,26 @@ function FilterSelect<T extends string>({
   )
 }
 
+function ModeToggle({ mode, onChange }: { mode: ChartMode; onChange: (m: ChartMode) => void }) {
+  return (
+    <div className="flex rounded-lg border border-slate-200 overflow-hidden text-xs">
+      {(["median", "mean"] as ChartMode[]).map((m) => (
+        <button
+          key={m}
+          onClick={() => onChange(m)}
+          className={`px-2.5 py-1 transition-colors ${
+            mode === m
+              ? "bg-slate-900 text-white font-medium"
+              : "bg-white text-slate-400 hover:text-slate-600"
+          }`}
+        >
+          {m === "median" ? "중앙값" : "평균값"}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 function EmptyState({ isReviewTypeEmpty }: { isReviewTypeEmpty: boolean }) {
   return (
     <div className="flex h-48 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
@@ -77,6 +98,8 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
   const [loadError, setLoadError] = useState(false)
   const [filters, setFilters] = useState<DashboardFilters>(DEFAULT_FILTERS)
+  const [discountMode, setDiscountMode] = useState<ChartMode>("median")
+  const [genreMode, setGenreMode] = useState<ChartMode>("median")
 
   useEffect(() => {
     fetch("/data/dashboard_events.json")
@@ -193,13 +216,13 @@ export default function DashboardPage() {
             <div className="container mx-auto px-4 py-8">
               <Stagger className="grid gap-5 md:grid-cols-2">
                 <StaggerItem>
-                  <ChartCard title="할인율 구간별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`}>
-                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <DiscountRateChart events={reviewFiltered} reviewType={filters.reviewType} />}
+                  <ChartCard title="할인율 구간별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`} headerRight={<ModeToggle mode={discountMode} onChange={setDiscountMode} />}>
+                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <DiscountRateChart events={reviewFiltered} reviewType={filters.reviewType} mode={discountMode} />}
                   </ChartCard>
                 </StaggerItem>
                 <StaggerItem>
-                  <ChartCard title="장르별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`}>
-                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <GenreChart events={reviewFiltered} reviewType={filters.reviewType} />}
+                  <ChartCard title="장르별 반응률" description={`리뷰 유형: ${reviewTypeLabel}`} headerRight={<ModeToggle mode={genreMode} onChange={setGenreMode} />}>
+                    {isEmpty || isReviewTypeEmpty ? <EmptyState isReviewTypeEmpty={isReviewTypeEmpty} /> : <GenreChart events={reviewFiltered} reviewType={filters.reviewType} mode={genreMode} />}
                   </ChartCard>
                 </StaggerItem>
                 <StaggerItem>
@@ -211,6 +234,22 @@ export default function DashboardPage() {
                   <ChartCard title="평판 변화 분포" description="긍정률 변화 기준 이벤트 분류">
                     <SentimentDistribution events={filtered} />
                   </ChartCard>
+                </StaggerItem>
+                <StaggerItem className="md:col-span-2">
+                  <ChartCard
+                    title="장르별 평판 변화 분포"
+                    description="장르별 긍정률 상승/유지/하락 이벤트 비율"
+                  >
+                    {isEmpty ? (
+                      <EmptyState isReviewTypeEmpty={false} />
+                    ) : (
+                      <SentimentByGenreChart events={filtered} />
+                    )}
+                  </ChartCard>
+                  <p className="text-xs text-slate-400 mt-2 px-1 leading-relaxed">
+                    ※ 전체 분포뿐 아니라 장르별로 긍정률 하락 비중을 확인할 수 있습니다.
+                    단순 유입량이 아닌, 유입의 질이 장르별로 다르게 나타남을 보여줍니다.
+                  </p>
                 </StaggerItem>
               </Stagger>
             </div>
