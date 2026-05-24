@@ -93,8 +93,8 @@ export function generateMarkdownReport(game: GameReport): string {
 - 전체 중앙값: ${game.overall_median_response.toFixed(3)}
 
 ## 시즌 비교
-- 시즌 세일 반응률: ${game.season_response !== undefined ? game.season_response.toFixed(3) : "데이터 없음"}
-- 비시즌 할인 반응률: ${game.nonseason_response !== undefined ? game.nonseason_response.toFixed(3) : "데이터 없음"}
+- 시즌 세일 반응률: ${game.season_response != null ? game.season_response.toFixed(3) : "데이터 없음"}
+- 비시즌 할인 반응률: ${game.nonseason_response != null ? game.nonseason_response.toFixed(3) : "데이터 없음"}
 
 ## 자동 해석 코멘트
 ${comment}
