@@ -271,9 +271,6 @@ export default function HomePage() {
           <p className="text-xs text-slate-400">
             ※ 과거 유사 조건 기반의 탐색적 분석 결과입니다. 예측 모델이 아닙니다.
           </p>
-          <Button asChild variant="ghost" size="sm" className="text-xs text-slate-400">
-            <Link href="/methodology">방법론 보기 →</Link>
-          </Button>
         </div>
       </section>
     </div>

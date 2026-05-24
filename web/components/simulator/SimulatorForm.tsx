@@ -23,6 +23,35 @@ const GENRES: Genre[] = ["Action", "RPG", "Adventure", "Casual/Lightweight", "St
 const FREQS: Freq[] = ["1회", "2회", "3회 이상"]
 const GOALS: Goal[] = ["단기 유입", "장기 유지", "만족도 관리"]
 
+function PillGroup<T extends string>({
+  options,
+  value,
+  onChange,
+}: {
+  options: readonly { value: T; label: string }[]
+  value: T
+  onChange: (v: T) => void
+}) {
+  return (
+    <div className="flex gap-1 rounded-lg bg-slate-100 p-1.5">
+      {options.map((opt) => (
+        <button
+          key={opt.value}
+          type="button"
+          onClick={() => onChange(opt.value)}
+          className={`flex-1 rounded-md px-3 py-1.5 text-sm transition-all ${
+            value === opt.value
+              ? "bg-white text-slate-900 font-semibold shadow"
+              : "text-slate-500 hover:text-slate-700"
+          }`}
+        >
+          {opt.label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
   const [genre, setGenre] = useState<Genre>("Action")
   const [rate, setRate] = useState<number>(40)
@@ -43,7 +72,10 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
 
   return (
     <form onSubmit={submit} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm space-y-5">
-      <h3 className="font-semibold text-slate-900">입력 조건</h3>
+      <div>
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-0.5">Step 1</p>
+        <h3 className="font-bold text-slate-900">입력 조건 설정</h3>
+      </div>
 
       <Field label="장르">
         <Select value={genre} onValueChange={(v) => setGenre(v as Genre)}>
@@ -56,7 +88,11 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
         </Select>
       </Field>
 
-      <Field label={`할인율: ${rate}%`}>
+      <Field label="할인율">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-xs text-slate-400">슬라이더로 조정하세요</span>
+          <span className="text-2xl font-bold text-blue-600 tabular-nums leading-none">{rate}%</span>
+        </div>
         <input
           type="range"
           min={10}
@@ -74,38 +110,33 @@ export function SimulatorForm({ onSubmit }: SimulatorFormProps) {
       </Field>
 
       <Field label="할인 시점">
-        <Select value={season} onValueChange={(v) => setSeason(v as Season)}>
-          <SelectTrigger><SelectValue /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="season">시즌 세일</SelectItem>
-            <SelectItem value="nonseason">비시즌 할인</SelectItem>
-          </SelectContent>
-        </Select>
+        <PillGroup
+          options={[
+            { value: "season" as Season, label: "시즌 세일" },
+            { value: "nonseason" as Season, label: "비시즌 할인" },
+          ]}
+          value={season}
+          onChange={setSeason}
+        />
       </Field>
 
       <Field label="연간 할인 빈도">
-        <Select value={freq} onValueChange={(v) => setFreq(v as Freq)}>
-          <SelectTrigger><SelectValue /></SelectTrigger>
-          <SelectContent>
-            {FREQS.map((f) => (
-              <SelectItem key={f} value={f}>{f}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <PillGroup
+          options={FREQS.map((f) => ({ value: f, label: f }))}
+          value={freq}
+          onChange={setFreq}
+        />
       </Field>
 
       <Field label="전략 목표">
-        <Select value={goal} onValueChange={(v) => setGoal(v as Goal)}>
-          <SelectTrigger><SelectValue /></SelectTrigger>
-          <SelectContent>
-            {GOALS.map((g) => (
-              <SelectItem key={g} value={g}>{g}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <PillGroup
+          options={GOALS.map((g) => ({ value: g, label: g }))}
+          value={goal}
+          onChange={setGoal}
+        />
       </Field>
 
-      <Button type="submit" className="w-full">진단 실행</Button>
+      <Button type="submit" className="w-full h-11 text-sm font-semibold">진단 실행 →</Button>
     </form>
   )
 }

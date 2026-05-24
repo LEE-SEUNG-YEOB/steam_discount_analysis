@@ -8,7 +8,6 @@ const navItems = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/report", label: "Game Report" },
   { href: "/simulator", label: "Simulator" },
-  { href: "/methodology", label: "Methodology" },
 ]
 
 export function TopNav() {

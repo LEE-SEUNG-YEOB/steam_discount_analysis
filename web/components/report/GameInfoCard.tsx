@@ -1,6 +1,9 @@
+"use client"
+
 import type { GameReport } from "@/types"
 import { Badge } from "@/components/ui/badge"
 import { formatPercent, formatRate } from "@/lib/format"
+import { Stagger, StaggerItem } from "@/components/ui/motion"
 
 interface GameInfoCardProps {
   game: GameReport
@@ -36,15 +39,15 @@ export function GameInfoCard({ game }: GameInfoCardProps) {
       </div>
 
       <div className="rounded-xl border border-slate-200 bg-white overflow-hidden">
-        <div className="flex items-center divide-x divide-slate-200">
+        <Stagger className="flex items-center divide-x divide-slate-200">
           {METRICS.map(({ label, accent }, i) => (
-            <div key={label} className="flex-1 px-5 py-5 text-center">
+            <StaggerItem key={label} className="flex-1 px-5 py-5 text-center">
               <div className={`w-5 h-0.5 rounded-full ${accent} mx-auto mb-3`} />
               <p className="text-2xl font-bold text-slate-900 tabular-nums">{values[i]}</p>
               <p className="text-xs text-slate-500 mt-1.5">{label}</p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </div>
   )

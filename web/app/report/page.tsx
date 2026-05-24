@@ -1,10 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import type { GameReport } from "@/types"
 import { GameSelector } from "@/components/report/GameSelector"
 import { ReportPanel } from "@/components/report/ReportPanel"
 import { ReportDownloadButton } from "@/components/report/ReportDownloadButton"
+import { FadeUp } from "@/components/ui/motion"
 
 export default function ReportPage() {
   const [reports, setReports] = useState<GameReport[]>([])
@@ -35,10 +37,12 @@ export default function ReportPage() {
       {/* ── 페이지 헤더 ── */}
       <section className="border-b bg-white">
         <div className="container mx-auto px-4 py-10">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">게임별 리포트</h1>
-          <p className="text-slate-500">
-            게임을 선택하면 과거 할인 이력, 반응률, 장르 평균 비교를 자동으로 정리합니다.
-          </p>
+          <FadeUp>
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 mb-2">게임별 리포트</h1>
+            <p className="text-slate-500">
+              게임을 선택하면 과거 할인 이력, 반응률, 장르 평균 비교를 자동으로 정리합니다.
+            </p>
+          </FadeUp>
         </div>
       </section>
 
@@ -104,13 +108,22 @@ export default function ReportPage() {
           )}
 
           {/* ── 리포트 ── */}
-          {selectedGame && selectedGame.valid_event_count > 0 && (
-            <section className="bg-white">
-              <div className="container mx-auto px-4 py-8">
-                <ReportPanel game={selectedGame} />
-              </div>
-            </section>
-          )}
+          <AnimatePresence mode="wait">
+            {selectedGame && selectedGame.valid_event_count > 0 && (
+              <motion.section
+                key={selectedId}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+                className="bg-white"
+              >
+                <div className="container mx-auto px-4 py-8">
+                  <ReportPanel game={selectedGame} />
+                </div>
+              </motion.section>
+            )}
+          </AnimatePresence>
         </>
       )}
     </div>
