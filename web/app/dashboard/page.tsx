@@ -19,7 +19,6 @@ import { FadeUp, Stagger, StaggerItem } from "@/components/ui/motion"
 import { DiscountRateChart, type ChartMode } from "@/components/dashboard/DiscountRateChart"
 import { GenreChart } from "@/components/dashboard/GenreChart"
 import { SeasonalityChart } from "@/components/dashboard/SeasonalityChart"
-import { PlaceboValidationCard } from "@/components/dashboard/PlaceboValidationCard"
 import { SentimentByGenreChart } from "@/components/dashboard/SentimentByGenreChart"
 import {
   Select,
@@ -101,6 +100,37 @@ const STAT_CONFIG = [
   { key: "valid",   label: "유효 분석 이벤트",  accent: "bg-violet-400",  sub: "전체 263건" },
   { key: "applied", label: "필터 적용 이벤트",  accent: "bg-emerald-400", sub: null },
 ]
+
+const FINDINGS = [
+  {
+    dot: "bg-blue-500",
+    title: "25% 미만 할인은 반응률이 절반 수준",
+    verdict: "유의미한 신호",
+    verdictStyle: "bg-blue-50 text-blue-700",
+    body: "소폭 할인(~25%)의 반응률은 0.125로, 50% 이상 할인(0.280~0.324)의 절반에 그칩니다. 단순히 '많이 깎을수록 좋다'가 아닌, 25~50% 구간이 최소 임계점으로 보입니다.",
+  },
+  {
+    dot: "bg-slate-400",
+    title: "장르별 차이는 탐색적 수준",
+    verdict: "탐색적 패턴",
+    verdictStyle: "bg-slate-100 text-slate-500",
+    body: "장르마다 반응률 분포가 다르게 나타나지만, 통계적 유의성은 낮아 참고 수준입니다.",
+  },
+  {
+    dot: "bg-slate-400",
+    title: "시즌 세일 효과 뚜렷하지 않음",
+    verdict: "탐색적 패턴",
+    verdictStyle: "bg-slate-100 text-slate-500",
+    body: "시즌 세일과 비시즌 할인 간 반응률 차이가 일관되게 나타나지 않습니다.",
+  },
+  {
+    dot: "bg-emerald-500",
+    title: "반응률 지표, 할인 이벤트 감지 확인",
+    verdict: "지표 검증됨",
+    verdictStyle: "bg-emerald-50 text-emerald-700",
+    body: "실제 할인 기간의 반응률이 비할인 랜덤 기간보다 높아, 지표가 의미 있음을 확인했습니다.",
+  },
+] as const
 
 export default function DashboardPage() {
   const [allEvents, setAllEvents] = useState<DashboardEvent[]>([])
@@ -274,47 +304,35 @@ export default function DashboardPage() {
             </div>
           </section>
 
-          {/* ── Placebo + 통계 요약 ── */}
+          {/* ── 통계 결과 요약 ── */}
           <section className="bg-white border-t">
             <div className="container mx-auto px-4 py-10">
               <FadeUp>
                 <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-1">Summary</p>
                 <h2 className="text-lg font-bold text-slate-900 mb-6">통계 결과 요약</h2>
               </FadeUp>
-              <div className="grid md:grid-cols-[1fr_320px] gap-6">
-                {/* 요약표 */}
-                <div className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-slate-100 bg-slate-50">
-                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">구분</th>
-                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">결과</th>
-                        <th className="text-left px-5 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wide">해석</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        { label: "할인율 효과",  badge: "p=0.004",      badgeStyle: "bg-blue-50 text-blue-700",     note: "상대적으로 강한 신호" },
-                        { label: "장르 차이",    badge: "p=0.52",       badgeStyle: "bg-slate-100 text-slate-500",  note: "탐색적 패턴" },
-                        { label: "시즌성",       badge: "약함",          badgeStyle: "bg-slate-100 text-slate-500",  note: "탐색적 패턴" },
-                        { label: "Placebo Test", badge: "실제 > 비할인", badgeStyle: "bg-emerald-50 text-emerald-700", note: "지표 검증" },
-                      ].map(({ label, badge, badgeStyle, note }) => (
-                        <tr key={label} className="border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors">
-                          <td className="px-5 py-3.5 font-medium text-slate-900">{label}</td>
-                          <td className="px-5 py-3.5">
-                            <span className={`inline-block rounded-md px-2 py-0.5 text-xs font-mono font-medium ${badgeStyle}`}>
-                              {badge}
-                            </span>
-                          </td>
-                          <td className="px-5 py-3.5 text-slate-500 text-xs">{note}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Placebo */}
-                <PlaceboValidationCard />
+              <div className="py-2">
+                {FINDINGS.map(({ dot, title, verdict, verdictStyle, body }, i) => (
+                  <div key={title} className="flex gap-5">
+                    {/* 타임라인 줄기 */}
+                    <div className="flex flex-col items-center shrink-0">
+                      <div className={`flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold text-white ${dot}`}>
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+                      {i < FINDINGS.length - 1 && (
+                        <div className="w-px flex-1 bg-slate-200 my-1.5" />
+                      )}
+                    </div>
+                    {/* 내용 */}
+                    <div className={`flex-1 ${i < FINDINGS.length - 1 ? "pb-8" : ""}`}>
+                      <div className="flex items-start justify-between gap-3 mb-1.5 -mt-0.5">
+                        <h3 className="font-semibold text-slate-900 leading-snug">{title}</h3>
+                        <span className={`shrink-0 text-xs font-medium px-2.5 py-0.5 rounded-full ${verdictStyle}`}>{verdict}</span>
+                      </div>
+                      <p className="text-sm text-slate-500 leading-relaxed">{body}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
