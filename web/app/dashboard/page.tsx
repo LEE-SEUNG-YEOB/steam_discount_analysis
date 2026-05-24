@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Fragment } from "react"
 import { SlidersHorizontal, X, BarChart3 } from "lucide-react"
 import type { DashboardEvent } from "@/types"
 import {
@@ -245,15 +245,15 @@ export default function DashboardPage() {
               <FadeUp>
                 <div className="flex items-center">
                   {STAT_CONFIG.map(({ key, label, accent, sub }, i) => (
-                    <>
-                      {i > 0 && <div key={`sep-${i}`} className="w-px h-10 bg-slate-200 shrink-0" />}
-                      <div key={key} className="flex-1 px-6 py-6 text-center">
+                    <Fragment key={key}>
+                      {i > 0 && <div className="w-px h-10 bg-slate-200 shrink-0" />}
+                      <div className="flex-1 px-6 py-6 text-center">
                         <div className={`w-5 h-0.5 rounded-full ${accent} mx-auto mb-3`} />
                         <p className="text-3xl font-bold text-slate-900 tabular-nums">{statValues[key]}</p>
                         <p className="text-xs text-slate-500 mt-1.5">{label}</p>
                         {sub && <p className="text-xs text-slate-300 mt-0.5">{sub}</p>}
                       </div>
-                    </>
+                    </Fragment>
                   ))}
                 </div>
               </FadeUp>

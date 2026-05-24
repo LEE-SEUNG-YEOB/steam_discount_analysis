@@ -23,7 +23,7 @@ export function generateReportComment(game: GameReport): string {
   )
 
   // 시즌 vs 비시즌
-  if (game.season_response !== undefined && game.nonseason_response !== undefined) {
+  if (game.season_response != null && game.nonseason_response != null) {
     const diff = Math.abs(game.season_response - game.nonseason_response)
     if (game.nonseason_response > game.season_response) {
       lines.push(
@@ -51,7 +51,17 @@ export function generateReportComment(game: GameReport): string {
     )
   }
 
-  if (game.season_response === undefined || game.nonseason_response === undefined) {
+  if (
+    game.avg_response_rate < 0 ||
+    (game.season_response != null && game.season_response < 0) ||
+    (game.nonseason_response != null && game.nonseason_response < 0)
+  ) {
+    lines.push(
+      `※ 음수 반응률은 할인 기간의 일평균 리뷰가 직전 30일보다 오히려 줄었음을 의미합니다.`
+    )
+  }
+
+  if (game.season_response == null || game.nonseason_response == null) {
     lines.push(
       `※ 수집된 할인 이벤트가 시즌 세일 또는 비시즌 한 종류만 존재해 시즌/비시즌 비교 데이터를 산출할 수 없습니다.`
     )
