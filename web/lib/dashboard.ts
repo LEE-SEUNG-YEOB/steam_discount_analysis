@@ -43,9 +43,9 @@ export function aggregateGenreSentiment(
   }
 
   const result: GenreSentimentData[] = []
-  for (const [genre, counts] of groups) {
+  groups.forEach((counts, genre) => {
     const total = counts.up + counts.neutral + counts.down
-    if (total === 0) continue
+    if (total === 0) return
     result.push({
       genre,
       up: (counts.up / total) * 100,
@@ -53,7 +53,7 @@ export function aggregateGenreSentiment(
       down: (counts.down / total) * 100,
       total,
     })
-  }
+  })
 
   return result.sort((a, b) => b.down - a.down)
 }
